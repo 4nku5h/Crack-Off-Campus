@@ -1,0 +1,516 @@
+:root {
+    --BackgroundColor: #F3F2EF;
+    --BorderCard:#E0DFDC;
+    --FontColorDarkGray:#3d3f41;
+    --FontColorLightGray:#3d3d3d;
+}
+
+html {
+    background-color: var(--BackgroundColor);
+}
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+/* Divider (for Style) ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+/* Use below P tag for divider  */
+/* <p className="divider_line"></p> */
+.divider_line {
+    border-top: 1px solid rgba(187, 187, 187, 0.521);
+  }
+
+
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/* Global Flex START ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+.flexBox_column {
+    background-color: var(--BackgroundColor);
+    justify-content: center;
+    display: flex;
+}
+
+.flexBox_row {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+}
+
+.flexBox_column_joined {
+    padding: 10px;
+    justify-content: space-between;
+    display: flex;
+}
+
+.UserDetails {
+    margin: 10px;
+    max-width: 15vw;
+    position: fixed;
+    top: 10vh;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+/* Global Flex END ------------------------------------------------------------------------------------*/
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/* Job Card Component start++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+.Card{
+      width: '100%';
+}
+
+.JobsCardComponent {
+    padding: auto;
+    border-radius: 10px;
+    background-color: #ffffff;
+    margin-bottom: 7px;
+    font-size: 3.5px;
+    max-width:45vw;
+    border: 1px solid var(--BorderCard);
+}
+.JobsCardComponent_divider {
+    width: 100%;
+    padding: 5%;
+    justify-content: start;
+    display: flex;
+}
+.JobsCardComponent_divider_first{
+    font-size: 1em;
+    width: 30%;
+}
+.JobsCardComponent_divider_second{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+}
+.job_apply_Button{
+    display: flex;
+    color: #0C67C2;
+    font-size: 5em;
+    font-style:bold;
+    align-items: flex-start;
+ }
+
+.jobsList {
+    height: auto;
+    flex: 1;
+    max-width: 50%;
+    margin: 10px;
+}
+.job_postedDate{
+    align-items: flex-start;
+    color: #087844;
+    font-size: 4em;
+    font-weight: 700;
+}
+.cardTitle{
+    margin-top: 8%;
+    font-size: 3em;
+}
+.job_apply_Button:hover {
+    text-decoration: underline;
+
+  }
+.list-group-flush{
+    max-height: 3px;
+    font-size: 4em;
+    color:#817f7f ;
+    color: var(--FontColorLightGray);
+}
+.JobComponent_Details{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+/* Job Card Component  END ------------------------------------------------------------------------------------*/
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/* Login Component Component  START ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+.LoginSignUp{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: var(--BackgroundColor);
+    font-size: 5px;
+}
+.LoginSignUp_inner{
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100vw;
+    max-height: 100vh;
+}
+.Login_Page{
+    border: 1px solid var(--BorderCard);
+    display: flex;
+    width: 65vw;
+    height: 60vh;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+}
+.Signup_Page{
+    border: 1px solid var(--BorderCard);
+    display: flex;
+    width: 65vw;
+    height: 60vh;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+}
+.LoginSignUp_divider_first{
+    width: 100vw;
+}
+.LoginSignUp_divider_second{
+  
+}
+#LoginSignUp_img{width: 100%; /* or any custom size */
+    height: 100%; 
+    object-fit:fill;
+    border-radius: 5px;
+    border: 1px solid var(--BorderCard);
+}
+#Login_text{
+    padding: 10px;
+    font-size: 1.5em;
+    font-weight: 700;
+}
+.LoginSignUp_form{
+    padding: 20px;
+    flex-direction: column;
+    justify-content: space-evenly;
+    display: flex;
+    font-size: 4em;
+}
+#LoginSignup_AppName{
+    display: flex;
+    padding: 20px;
+    font-weight: 700;
+}
+#LoginSignup_span{
+    margin-top: auto;
+    margin-left: 5px;
+    font-size: 13px;
+}
+#btn_attempt_login_signup{
+    padding: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    width: 20vw;
+    font-size: 3.5em;
+    border-radius: 30px;
+    background-color:rgb(67, 219, 36);
+    color: #ffffff;
+    border: 1px solid var(--BorderCard);
+    
+}
+#btn_attempt_login_signup_secondary{
+    padding: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    width: 10vw;
+    font-size: 3.5em;
+    border-radius: 30px;
+    background-color:rgb(255, 73, 60);
+    color: #ffffff;
+    border: 1px solid var(--BorderCard);
+    
+}
+#btn_attempt_login_signup:hover{
+    font-size: 4em;
+}
+#btn_attempt_login_signup_secondary:hover{
+    font-size: 4em;
+}
+.LoginSignup_btn_divider{
+    display: flex;
+    flex-direction: column;
+}
+/* Login Component  End ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/* Job Details Float Component  START ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+.JobDetailsFloat{
+    margin: 20px;
+    padding: 15px;
+    width: 20vw;
+    background-color: #ffffff;
+    border-radius: 10px;
+    position: fixed;
+    font-size: 5px;
+    top: 9vh;
+    border: 1px solid var(--BorderCard);
+}
+#JobFloat_Title{
+    font-size: 3.7em;
+    font-weight: bold;
+    color: var(--FontColorDarkGray);
+
+}
+#JobFloat_items{
+    font-size: 3em;
+}
+/* Job Details Float Component  END ------------------------------------------------------------------------------------*/
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+
+/* Job Filter  Component  START++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+.JobFilterFloat{
+    margin: 20px;
+    padding: 15px;
+    width: 25vw;
+    background-color: #ffffff;
+    border-radius: 10px;
+    position: fixed;
+    right: 0;
+    top: 9vh;
+    bottom: 0vh;
+    font-size: 2.5em;
+    border: 1px solid var(--BorderCard);
+
+}
+#JobFilter_Title{
+    font-size: 2em;
+    font-weight: bold;
+    color: var(--FontColorDarkGray);
+}
+#JobFilter_items{
+    font-size: 1.2em;
+    color: var(--FontColorLightGray);
+}
+.JobFilter_divider_column{
+    padding: 10px;
+    justify-content: flex-start;
+    display: flex;
+    margin-left: 15px;
+}
+#filter_company_checkbox{
+    margin-right: 10px;
+}
+#JobFilter_Type{
+    display: flex;
+    align-items: flex-start;
+    font-size: 1.7em;
+    margin-left: 5px;
+    color: var(--FontColorDarkGray);
+    font-weight: 600;
+}
+/* Job Filter  Component  END++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+/* Information Component  START++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+.Information {
+    margin: 10px;
+    max-width: 15vw;
+    position: fixed;
+    top: 10vh;
+    right: 0;
+    z-index: 1;
+}
+/* Information Component  END ------------------------------------------------------------------------------------*/
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+/* CRACK off Campus Component  START ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+
+.CrackOffCampus {
+    margin-top: 10vh;
+    height: 85vh;
+    font-size: 4px;
+
+}
+/* CRACK off Campus Component  END ------------------------------------------------------------------------------------*/
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////*//* 
+
+NAVBAR Component  START++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+.Navbar {
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    right: 0;
+    top: 0%;
+    left: 0;
+    z-index: 1;
+    background-color: #ffffff;
+    width: 100vw;
+    padding: 7px;
+    font-size: 4em;
+    border: 1px solid var(--BorderCard);
+}
+
+.Navbar_inner_divider_first{
+    width:70%;
+    display: flex;
+    justify-content: flex-start;
+}
+.Navbar_inner_divider_second{
+    width: 30vw;
+    display: flex;
+    margin-right: 5vw;
+    justify-content: flex-end;
+}
+.Navbar_Content{
+    color:#817f7f;
+}
+.Navbar_Content:hover{
+    color:black;
+}
+
+
+#Navbar_home{
+    margin-left: 1vw; 
+}
+#Navbar_Referals{
+    font-size: 0.8em;
+    margin-left: 1vw;
+}
+
+#Navbar_Resume{
+    font-size: 0.8em;
+    margin-left: 1vw;
+}
+#Navbar_PostJob{
+    font-size: 0.8em;
+    margin-left: 1vw; 
+}
+#Navbar_Careers{
+    font-size: 0.8em;
+    margin-left: 1vw;
+}
+#Navbar_Content_search{
+    margin-left: 2vw;
+    background-color: #dbdbdb;
+    border: beige;
+    border-radius: 20px;
+}
+/* NAVBAR Component  END------------------------------------------------------------------------------------*/
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+/* Loading Component  END++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+
+.Loading {
+    transition: all 0.7s;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+}
+
+.Loading_inner {
+    flex-direction: column-reverse;
+    justify-content: center;
+    display: flex;
+    font-size: 15em;
+    color: #2b2b2b;
+}
+/* Loading Component  END------------------------------------------------------------------------------------*/
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////*//*
+
+Media Responsive Query  START++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+@media screen and (max-width: 800px) {
+
+    .JobsCardComponent {
+        font-size: 4px;
+        max-width: 60%;
+    }
+    .jobsList {
+        
+        max-width: 100%;
+        margin: 10px;
+    }
+    .JobDetailsFloat{
+        visibility: hidden;
+    }
+    .JobFilterFloat{
+        max-width: 40%;
+    }
+    .Navbar {
+        font-size: 3em;
+    }
+    .JobFilterFloat{
+        width: 35vw;
+    }
+}
+@media screen and (max-width: 700px) {
+    .JobsCardComponent {
+        font-size: 3.2px;
+        max-width: 62%;
+    }
+    .jobsList {
+        max-width: 100%;
+        margin: 10px;
+    }
+    .JobDetailsFloat{
+        visibility: hidden;
+    }
+    .JobFilterFloat{
+        width: 32vw;
+    }
+    .LoginSignUp_divider_second{   
+        visibility: hidden;
+    }
+}
+@media screen and (max-width: 600px) {
+    .JobsCardComponent {
+        font-size: 3px;
+        max-width: 100%;
+    }
+    .jobsList {
+        
+        max-width: 100%;
+        margin: 10px;
+    }
+    .JobDetailsFloat{
+        visibility: hidden;
+    }
+    .JobFilterFloat{
+        visibility: hidden;
+    }
+    .Navbar {
+        font-size: 2.5em;
+    }
+}
+@media screen and (max-width: 500px) {
+    .Navbar {
+        font-size: 2em;
+    }
+}
+/* Media Responsive Query  END ------------------------------------------------------------------------------------*/
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////*/
