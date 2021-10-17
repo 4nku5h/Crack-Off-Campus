@@ -17,6 +17,7 @@ let initialState={
   ]
 }
 
+
 let jobsData= (state=initialState, action)=>{
     switch (action.type) {
       case "JOBS_DATA":
