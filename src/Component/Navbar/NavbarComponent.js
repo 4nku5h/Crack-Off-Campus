@@ -21,6 +21,7 @@ function NavbarComponent(props) {
                             <li class="nav-item active" >
                                 <HouseFill style={{ marginRight: "7px" }} id="logo_account" color="#000" size={20} />
                                 <a class="nav-link">Home</a>
+
                             </li>
 
                         </Link>
