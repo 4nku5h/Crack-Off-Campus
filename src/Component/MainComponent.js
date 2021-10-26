@@ -11,7 +11,7 @@ function MainComponent() {
         <Router>
             <NavbarComponent />
             <Switch>
-                <Route path="/" exact component={JobsComponent} />
+                <Route path="/jobs" exact component={JobsComponent} />
                 <Route path="/seewe" exact component={SeeweComponent} />
                 <Route path="/courses" exact component={CoursesComponent} />
                 <Route path="/referal" exact component={ReferalComponent} />

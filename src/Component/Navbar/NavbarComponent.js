@@ -1,5 +1,5 @@
 import React from 'react';
-import { HouseFill, MenuButtonWideFill, BookFill, FolderSymlinkFill } from 'react-bootstrap-icons';
+import { HouseFill, MenuButtonWideFill, BookFill, FolderSymlinkFill , BriefcaseFill} from 'react-bootstrap-icons';
 
 /// Router
 import { Link } from 'react-router-dom';
@@ -25,6 +25,14 @@ function NavbarComponent(props) {
                             <li class="nav-item active" >
                                 <HouseFill style={{ marginRight: "7px" }} id="logo_account" color="#000" size={20} />
                                 <a class="nav-link">Home</a>
+                            </li>
+
+                        </Link>
+
+                        <Link to="/jobs">
+                            <li class="nav-item active" >
+                                <BriefcaseFill style={{ marginRight: "7px" }} id="logo_account" color="#000" size={20} />
+                                <a class="nav-link">Jobs</a>
                             </li>
 
                         </Link>
