@@ -4,6 +4,7 @@ import JobsComponent from "./CrackOffCampus-Jobs/JobsComponent";
 import SeeweComponent from "./CrackOffCampus-SeeWe/SeeWe/SeeweComponent";
 import CoursesComponent from "./CrackOffCampus-Courses/Courses/CoursesComponent";
 import ReferalComponent from "./CrackOffCampus-Referals/Referals/ReferalComponent";
+import HomeComponent from "./CrackOffCampus-Home/HomeComponent";
 //router
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 function MainComponent() {
@@ -11,6 +12,7 @@ function MainComponent() {
         <Router>
             <NavbarComponent />
             <Switch>
+                <Route path="/" exact component={HomeComponent} />
                 <Route path="/jobs" exact component={JobsComponent} />
                 <Route path="/seewe" exact component={SeeweComponent} />
                 <Route path="/courses" exact component={CoursesComponent} />
