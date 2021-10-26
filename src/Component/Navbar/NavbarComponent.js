@@ -21,34 +21,36 @@ function NavbarComponent(props) {
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
 
-                        
-                            <li class="nav-item active">
+                        <Link to="/">
+                            <li class="nav-item active" >
                                 <HouseFill style={{ marginRight: "7px" }} id="logo_account" color="#000" size={20} />
-                                <a class="nav-link" href="/">Home <span class="sr-only"></span></a>
+                                <a class="nav-link">Home</a>
                             </li>
-                       
 
-                        <li class="nav-item">
-                            
+                        </Link>
+
+                        <Link to="/seewe">
+                            <li class="nav-item">
                                 <MenuButtonWideFill style={{ marginRight: "7px" }} id="logo_account" color="#000" size={20} />
-                                <a class="nav-link" href="/seewe">Seewe</a>
-                            
+                                <a class="nav-link" >Seewe</a>
+                            </li>
+                        </Link>
 
-                        </li>
-                        <li class="nav-item">
-                            
+
+                        <Link to="/courses">
+                            <li class="nav-item">
                                 <BookFill style={{ marginRight: "7px" }} id="logo_account" color="#000" size={20} />
-                                <a class="nav-link" href="/courses">Courses</a>
-                            
+                                <a class="nav-link">Courses</a>
+                            </li>
+                        </Link>
 
-                        </li>
-                        <li class="nav-item">
-                           
+                        <Link to="/referal">
+                            <li class="nav-item">
                                 <FolderSymlinkFill style={{ marginRight: "7px" }} id="logo_account" color="#000" size={20} />
-                                <a class="nav-link" href="/referal">Referal</a>
-                          
+                                <a class="nav-link">Referal</a>
+                            </li>
+                        </Link>
 
-                        </li>
                     </ul>
                 </div>
 
