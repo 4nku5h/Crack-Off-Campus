@@ -1,7 +1,7 @@
 :root {
     --BackgroundColor: #F3F2EF;
     --BorderCard:#E0DFDC;
-    --FontColorDarkGray:#3d3f41;
+    --FontColorDarkGray:#3780c9;
     --FontColorLightGray:#3d3d3d;
 }
 
@@ -286,7 +286,7 @@ code {
     right: 0;
     top: 9vh;
     bottom: 0vh;
-    font-size: 2.5em;
+    font-size: 0.9em;
     border: 1px solid var(--BorderCard);
 
 }
@@ -336,14 +336,26 @@ code {
 /* //////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 /* //////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 /* //////////////////////////////////////////////////////////////////////////////////////////////////////////*/
-
-/* CRACK off Campus Component  START ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
-
-.CrackOffCampus {
+.ReferalComponent{
     margin-top: 10vh;
     height: 85vh;
-    font-size: 4px;
+}
 
+.CoursesComponent{
+    margin-top: 10vh;
+    height: 85vh;
+}
+
+.SeeweComponent{
+    margin-top: 10vh;
+    height: 85vh;
+}
+/* CRACK off Campus Component  START ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+
+.JobsComponent {
+    margin-top: 10vh;
+    height: 85vh;
+    /*font-size: 4px;*/
 }
 /* CRACK off Campus Component  END ------------------------------------------------------------------------------------*/
 /* //////////////////////////////////////////////////////////////////////////////////////////////////////////*/
@@ -362,56 +374,11 @@ NAVBAR Component  START+++++++++++++++++++++++++++++++++++++++++++++++++++++++++
     z-index: 1;
     background-color: #ffffff;
     width: 100vw;
+    height: 70px;
     padding: 7px;
-    font-size: 4em;
     border: 1px solid var(--BorderCard);
 }
 
-.Navbar_inner_divider_first{
-    width:70%;
-    display: flex;
-    justify-content: flex-start;
-}
-.Navbar_inner_divider_second{
-    width: 30vw;
-    display: flex;
-    margin-right: 5vw;
-    justify-content: flex-end;
-}
-.Navbar_Content{
-    color:#817f7f;
-}
-.Navbar_Content:hover{
-    color:black;
-}
-
-
-#Navbar_home{
-    margin-left: 1vw; 
-}
-#Navbar_Referals{
-    font-size: 0.8em;
-    margin-left: 1vw;
-}
-
-#Navbar_Resume{
-    font-size: 0.8em;
-    margin-left: 1vw;
-}
-#Navbar_PostJob{
-    font-size: 0.8em;
-    margin-left: 1vw; 
-}
-#Navbar_Careers{
-    font-size: 0.8em;
-    margin-left: 1vw;
-}
-#Navbar_Content_search{
-    margin-left: 2vw;
-    background-color: #dbdbdb;
-    border: beige;
-    border-radius: 20px;
-}
 /* NAVBAR Component  END------------------------------------------------------------------------------------*/
 /* //////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 /* //////////////////////////////////////////////////////////////////////////////////////////////////////////*/
@@ -459,7 +426,6 @@ Media Responsive Query  START+++++++++++++++++++++++++++++++++++++++++++++++++++
         max-width: 40%;
     }
     .Navbar {
-        font-size: 3em;
     }
     .JobFilterFloat{
         width: 35vw;
@@ -501,12 +467,10 @@ Media Responsive Query  START+++++++++++++++++++++++++++++++++++++++++++++++++++
         visibility: hidden;
     }
     .Navbar {
-        font-size: 2.5em;
     }
 }
 @media screen and (max-width: 500px) {
     .Navbar {
-        font-size: 2em;
     }
 }
 /* Media Responsive Query  END ------------------------------------------------------------------------------------*/

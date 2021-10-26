@@ -2,7 +2,8 @@ import React from 'react';
 import './App.css';
 import LoadingComponent from './Component/Loading/LoadingComponent';
 import LoginSignupComponent from './Component/LoginSignup/LoginSignupComponent';
-import CrackOffCampus from './Component/CrackOffCampus-Jobs/CrackOffCampus/CrackOffCampus';
+import JobsComponent from './Component/CrackOffCampus-Jobs/JobsComponent';
+import MainComponent from './Component/MainComponent';
 
 //redux
 import { useDispatch, useSelector } from "react-redux";
@@ -30,7 +31,7 @@ function App() {
                         (
                             // LoggedIn successfully or Already LoggedIn
                             // After Login : CrackoffCampus Is the Main Component
-                            <CrackOffCampus />
+                            <MainComponent/>
                         )
                 )
         }

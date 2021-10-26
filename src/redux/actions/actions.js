@@ -15,7 +15,10 @@ export const fetchData = () => {
         dispatch(setUserDetatil(result.data.userDetails))
         dispatch(setInformation_announcementDetails(result.data.informationAnnouncement))
         dispatch(setJobsData(result.data.jobsData))
-        dispatch(setApiStatus(true))
+        setTimeout(()=>{
+          dispatch(setApiStatus(true))
+        },700);
+        
       })
   }
 }
