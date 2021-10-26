@@ -1,12 +1,8 @@
 import React from 'react';
-import { HouseFill, MenuButtonWideFill, BookFill, FolderSymlinkFill , BriefcaseFill} from 'react-bootstrap-icons';
+import { HouseFill, CreditCard2FrontFill, BookHalf, FolderSymlinkFill , BriefcaseFill, TvFill, TerminalFill} from 'react-bootstrap-icons';
 
 /// Router
 import { Link } from 'react-router-dom';
-import CoursesComponent from '../CrackOffCampus-Courses/Courses/CoursesComponent';
-import JobsComponent from '../CrackOffCampus-Jobs/JobsComponent';
-import SeeweComponent from '../CrackOffCampus-SeeWe/SeeWe/SeeweComponent';
-import ReferalComponent from '../CrackOffCampus-Referals/Referals/ReferalComponent';
 
 function NavbarComponent(props) {
     { console.log(props.data) }
@@ -39,7 +35,7 @@ function NavbarComponent(props) {
 
                         <Link to="/seewe">
                             <li class="nav-item">
-                                <MenuButtonWideFill style={{ marginRight: "7px" }} id="logo_account" color="#000" size={20} />
+                                <CreditCard2FrontFill style={{ marginRight: "7px" }} id="logo_account" color="#000" size={20} />
                                 <a class="nav-link" >Seewe</a>
                             </li>
                         </Link>
@@ -47,15 +43,29 @@ function NavbarComponent(props) {
 
                         <Link to="/courses">
                             <li class="nav-item">
-                                <BookFill style={{ marginRight: "7px" }} id="logo_account" color="#000" size={20} />
+                                <BookHalf style={{ marginRight: "7px" }} id="logo_account" color="#000" size={20} />
                                 <a class="nav-link">Courses</a>
                             </li>
                         </Link>
 
-                        <Link to="/referal">
+                        <Link to="/hire">
                             <li class="nav-item">
                                 <FolderSymlinkFill style={{ marginRight: "7px" }} id="logo_account" color="#000" size={20} />
-                                <a class="nav-link">Referal</a>
+                                <a class="nav-link">Hire</a>
+                            </li>
+                        </Link>
+
+                        <Link to="/placement">
+                            <li class="nav-item">
+                                <TvFill style={{ marginRight: "7px" }} id="logo_account" color="#000" size={20} />
+                                <a class="nav-link">Placement</a>
+                            </li>
+                        </Link>
+
+                        <Link to="/compiler">
+                            <li class="nav-item">
+                                <TerminalFill style={{ marginRight: "7px" }} id="logo_account" color="#000" size={20} />
+                                <a class="nav-link">Compiler</a>
                             </li>
                         </Link>
 
