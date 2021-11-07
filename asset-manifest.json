@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/crack-off-campus/static/css/main.1df96dff.chunk.css",
+    "main.js": "/crack-off-campus/static/js/main.e2ae5a47.chunk.js",
+    "main.js.map": "/crack-off-campus/static/js/main.e2ae5a47.chunk.js.map",
+    "runtime-main.js": "/crack-off-campus/static/js/runtime-main.eb9e6f6b.js",
+    "runtime-main.js.map": "/crack-off-campus/static/js/runtime-main.eb9e6f6b.js.map",
+    "static/css/2.fb17aa6d.chunk.css": "/crack-off-campus/static/css/2.fb17aa6d.chunk.css",
+    "static/js/2.3592eb23.chunk.js": "/crack-off-campus/static/js/2.3592eb23.chunk.js",
+    "static/js/2.3592eb23.chunk.js.map": "/crack-off-campus/static/js/2.3592eb23.chunk.js.map",
+    "static/js/3.8f02c913.chunk.js": "/crack-off-campus/static/js/3.8f02c913.chunk.js",
+    "static/js/3.8f02c913.chunk.js.map": "/crack-off-campus/static/js/3.8f02c913.chunk.js.map",
+    "index.html": "/crack-off-campus/index.html",
+    "static/css/2.fb17aa6d.chunk.css.map": "/crack-off-campus/static/css/2.fb17aa6d.chunk.css.map",
+    "static/css/main.1df96dff.chunk.css.map": "/crack-off-campus/static/css/main.1df96dff.chunk.css.map",
+    "static/js/2.3592eb23.chunk.js.LICENSE.txt": "/crack-off-campus/static/js/2.3592eb23.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.eb9e6f6b.js",
+    "static/css/2.fb17aa6d.chunk.css",
+    "static/js/2.3592eb23.chunk.js",
+    "static/css/main.1df96dff.chunk.css",
+    "static/js/main.e2ae5a47.chunk.js"
+  ]
+}
