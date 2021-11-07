@@ -1,12 +1,48 @@
 import axios from "axios";
-const baseUrl = 'https://raw.githubusercontent.com/weepiccoders/API-2.0/main/temp.json';
 
-function getApiReference() {
+/////////////////////////// LOGIN ////////////////////////////////////
+const loginEndpiont = 'https://raw.githubusercontent.com/4nku5h/API_TEST/main/login.json';
 
-    return axios.get(baseUrl);
-
+function getLoginApiReference() {
+    return axios.get(loginEndpiont);
 }
 
 export {
-    getApiReference,
+    getLoginApiReference,
+};
+
+
+////////////////////////////// JOBS DATA /////////////////////////////////
+const jobsEndPoint = 'https://raw.githubusercontent.com/4nku5h/API_TEST/main/jobs.json';
+
+function getJobsApiReference() {
+    return axios.get(jobsEndPoint);
+}
+
+export {
+    getJobsApiReference,
+};
+
+
+//////////////////////////////// USER DETAILS ///////////////////////////////
+const userDetailsEndpiont = 'https://raw.githubusercontent.com/4nku5h/API_TEST/main/user.json';
+
+function getUserApiReference() {
+    return axios.get(userDetailsEndpiont);
+}
+
+export {
+    getUserApiReference,
+};
+
+
+//////////////////////////////// COURSES DATA ///////////////////////////////
+const coursesDataEndpiont = 'https://raw.githubusercontent.com/4nku5h/API_TEST/main/courses.json';
+
+function getCoursesApiReference() {
+    return axios.get(coursesDataEndpiont);
+}
+
+export {
+    getCoursesApiReference,
 };

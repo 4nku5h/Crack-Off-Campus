@@ -1,35 +1,61 @@
-import { getApiReference } from '../../Api/Api';
+import { getJobsApiReference, getUserApiReference, getLoginApiReference, getCoursesApiReference } from '../../Api/Api';
 
-/////////////////////////////[ API ]////////////////////////////////////////
-export const setApiStatus = (data) => {
-  return {
-    type: 'API_STATUS',
-    payload: data
-  };
-}
-
-export const fetchData = () => {
+export const fetchLoginDetails = () => {
   return (dispatch) => {
-    getApiReference()
+    getLoginApiReference()
       .then(result => {
-        dispatch(setUserDetatil(result.data.userDetails))
-        dispatch(setInformation_announcementDetails(result.data.informationAnnouncement))
-        dispatch(setJobsData(result.data.jobsData))
-        setTimeout(()=>{
-          dispatch(setApiStatus(true))
-        },700);
-        
+        dispatch(setLoggedIn(result.data.isLoggedIn))
       })
   }
 }
 
-
-/////////////////////////////[ LOGIN/SiGNUP ]/////////////////////////////
-export const setLoggedIn = () => {
-  return { type: 'LOGIN' };
+export const fetchJobsData = () => {
+  return (dispatch) => {
+    getJobsApiReference()
+      .then(result => {
+        dispatch(setInformation_announcementDetails(result.data.informationAnnouncement))
+        dispatch(setJobsData(result.data.jobsData))
+      })
+  }
 }
-export const setLoginPageVisible = () => {
-  return { type: 'LOGIN_VISIBLE' };
+
+export const fetchUserDetails = () => {
+  return (dispatch) => {
+    getUserApiReference()
+      .then(result => {
+        dispatch(setUserDetatil(result.data.userDetails))
+      })
+  }
+}
+
+export const fetchCoursesDetails = () => {
+  return (dispatch) => {
+    getCoursesApiReference()
+      .then(result => {
+        dispatch(setCoursesData(result.data))
+      })
+  }
+}
+/////////////////////////////[ API ]////////////////////////////////////////
+
+export const setAccessWithoutLogin = (data) => {
+  return {
+    type: 'ACCESS_WITHOUT_LOGIN',
+    payload: data
+  };
+}
+/////////////////////////////[ LOGIN/SiGNUP ]/////////////////////////////
+export const setLoggedIn = (data) => {
+  return {
+    type: 'LOGIN',
+    payload: data
+  };
+}
+export const setLoginSignupComponentVisibility = (data) => {
+  return { 
+    type: 'LOGIN_SIGNUP_COMPONENT_VISIBLE',
+    payload:data
+  };
 }
 
 
@@ -51,6 +77,13 @@ export const setInformation_announcementDetails = (data) => {
 export const setJobsData = (data) => {
   return {
     type: 'JOBS_DATA',
+    payload: data
+  };
+}
+
+export const setCoursesData = (data) => {
+  return {
+    type: 'COURSES_DATA',
     payload: data
   };
 }

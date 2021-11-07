@@ -10,29 +10,18 @@ import { useDispatch, useSelector } from "react-redux";
 import { setLoggedIn, setUserDetatil, setInformation_announcementDetails, setJobsData, fetchData } from "../src/redux/actions/actions";
 import store from './redux/store/store';
 //
-
+///temp study links https://codepen.io/seanseansean/full/EaBZEY , https://www.youtube.com/watch?v=Vi3ij91wqaw
 function App() {
-    const isDataFetched = useSelector(state => state.isDataFetched);
+    const isAccessWithoutLogin = useSelector(state => state.isAccessWithoutLogin);
     const isLoggedin = useSelector(state => state.isLoggedin)
 
     return (
         <div className="App" > {
-            (isDataFetched==false) ? (
+            (isAccessWithoutLogin == false && isLoggedin == false) ? (
                 <LoadingComponent />
             ) :
                 (
-                    //Data Fetched Sussessfully
-                    // checking for Login
-                    (!isLoggedin) ?
-                        (
-                            // Need To Login
-                            <LoginSignupComponent />
-                        ) :
-                        (
-                            // LoggedIn successfully or Already LoggedIn
-                            // After Login : CrackoffCampus Is the Main Component
-                            <MainComponent/>
-                        )
+                    <MainComponent />
                 )
         }
         </div>

@@ -5,7 +5,7 @@ function LoginSignUp_UI(props) {
     <div className="Login_Page">
       {/* Divider first*/}
       <div className="LoginSignUp_divider_first">
-        <h3 id="LoginSignup_AppName">Crack off campus<span id="LoginSignup_span">jobs</span></h3>
+        <h3 id="LoginSignup_AppName">Crack off campus</h3>
         <form className="LoginSignUp_form">
           <p id="Login_text">Login</p>
           <label>
@@ -20,8 +20,8 @@ function LoginSignUp_UI(props) {
         </form>
         <div className="LoginSignup_btn_divider">
           <button id="btn_attempt_login_signup" onClick={() => props.handleLogin()}>Login</button>
-          <button id="btn_attempt_login_signup_secondary" onClick={() => props.handlecurrentPage()}>{(props.isLoginPageVisible == true) ? ("Login") : ("Signup")}</button>
-
+          <button id="btn_attempt_login_signup_secondary" onClick={() => props.handlecurrentPage()}>{(props.isLoginPageVisible == false) ? ("Login") : ("Signup")}</button>
+          <button id="btn_close_LoginSignupComponent" onClick={()=>props.handleCloseComponent()}>X</button>
         </div>
       </div>
 

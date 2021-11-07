@@ -7,6 +7,7 @@ import ReferalComponent from "./CrackOffCampus-Referals/Referals/ReferalComponen
 import HomeComponent from "./CrackOffCampus-Home/HomeComponent";
 import PlacementComponent from "./CrackOffCampus-Placement/PlacementGuaranteed/PlacementComponent";
 import CompilerComponent from "./CrackOffCampus-Compiler/CompilerComponent";
+import LoginSignupComponent from "./LoginSignup/LoginSignupComponent";
 
 //router
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';

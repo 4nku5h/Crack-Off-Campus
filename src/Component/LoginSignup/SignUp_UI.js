@@ -24,6 +24,8 @@ function SignUp_UI(props) {
         <div className="LoginSignup_btn_divider">
           <button id="btn_attempt_login_signup" onClick={() => props.handleSignUp()}>Signup</button>
           <button id="btn_attempt_login_signup_secondary" onClick={() => props.handlecurrentPage()}>Login</button>
+          <button id="btn_close_LoginSignupComponent" onClick={()=>props.handleCloseComponent()}>X</button>
+          {console.log(props)}
         </div>
       </div>
     </div>

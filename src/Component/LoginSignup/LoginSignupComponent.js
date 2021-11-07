@@ -1,22 +1,28 @@
 import React, { Component } from "react";
-import { useDispatch } from "react-redux";
+import './styles.css'
 import Login_UI from "./Login_UI";
 import SignUp_UI from "./SignUp_UI";
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
-import { setLoggedIn, setLoginPageVisible } from "../../redux/actions/actions";
+import { setLoggedIn, setLoginSignupComponentVisibility } from "../../redux/actions/actions";
+
+// API
+import {fetchLoginDetails,fetchUserDetails} from "../../redux/actions/actions";
 
 class LoginSignUp extends Component {
   constructor() {
     super();
     this.state={
+       isLoginPageVisible:true,
        loginDetails:{username:null,password:null},
        signupDetails:{username:null,email:null,password:null}
+
     }
     
     this.handleLogin = this.handleLogin.bind(this)
     this.handleSignUp = this.handleSignUp.bind(this)
     this.handlecurrentPage=this.handlecurrentPage.bind(this)
+    this.handleCloseComponent=this.handleCloseComponent.bind(this)
   }
   
   togglePage(){
@@ -28,33 +34,42 @@ class LoginSignUp extends Component {
     // write Login Code Here
     //also save login state to local storage
     if(this.state.loginDetails.username!=null && this.state.loginDetails.password!=null){
-      this.props.setLoggedIn()
+      this.props.fetchLoginDetails()
+      this.props.fetchUserDetails()
+      this.props.setLoginSignupComponentVisibility(false)
+
     }
   }
 
-  handleSignUp(e) {
+  handleSignUp(e){
     // write Signup Code Here
     //also save login state to local storage
     if(this.state.signupDetails.username!=null && this.state.signupDetails.email!=null && this.state.signupDetails.password!=null){
-      this.props.setLoggedIn()
+      this.props.fetchLoginDetails()
+      this.props.fetchUserDetails()
+      this.props.setLoginSignupComponentVisibility(false)
     }
     
   }
   
   handlecurrentPage(){
-    this.props.setLoginPageVisible()
+    this.setState({isLoginPageVisible:!this.state.isLoginPageVisible})
   } 
+  handleCloseComponent(){
+    this.props.setLoginSignupComponentVisibility(false)
+  }
 
   render() {
     return (
       <div className="LoginSignUp">
         <div className="LoginSignUp_inner">
-          {((this.props.isLoginPageVisible) ? (
+          {((this.state.isLoginPageVisible) ? (
             <Login_UI
               data={this.state.loginDetails}
               isLoginPageVisible={this.state.isLoginPageVisible}
               handleLogin={this.handleLogin}
               handlecurrentPage={this.handlecurrentPage}
+              handleCloseComponent={this.handleCloseComponent}
             />)
             :
             (
@@ -63,6 +78,7 @@ class LoginSignUp extends Component {
                 isLoginPageVisible={this.state.isLoginPageVisible}
                 handleSignUp={this.handleSignUp}
                 handlecurrentPage={this.handlecurrentPage}
+                handleCloseComponent={this.handleCloseComponent}
               />
             ))
           }
@@ -75,13 +91,13 @@ class LoginSignUp extends Component {
 
 function mapStateToProps(state){
    return {
-     isLoggedIn:state.isLoggedin,
-     isLoginPageVisible:state.isLoginPageVisible
+    isLoggedin:state.isLoggedin,
+     isLoginSignupComponentVisible:state.isLoginSignupComponentVisible
    };
 }
 
 function mapDispatchToProps(dispatch){
-  return bindActionCreators({setLoginPageVisible:setLoginPageVisible, setLoggedIn:setLoggedIn}, dispatch);
+  return bindActionCreators({setLoginSignupComponentVisibility:setLoginSignupComponentVisibility, setLoggedIn:setLoggedIn, fetchLoginDetails:fetchLoginDetails, fetchUserDetails,fetchUserDetails}, dispatch);
 }
 
 export default connect (mapStateToProps, mapDispatchToProps)(LoginSignUp);
