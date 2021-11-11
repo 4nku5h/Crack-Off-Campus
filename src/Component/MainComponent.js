@@ -16,13 +16,14 @@ function MainComponent() {
         <Router>
             <NavbarComponent />
             <Switch>
-                <Route path="/" exact component={HomeComponent} />
+                
                 <Route path="/jobs" exact component={JobsComponent} />
                 <Route path="/seewe" exact component={SeeweComponent} />
                 <Route path="/courses" exact component={CoursesComponent} />
                 <Route path="/hire" exact component={ReferalComponent} />
                 <Route path="/placement" exact component={PlacementComponent} />
                 <Route path="/compiler" exact component={CompilerComponent} />
+                <Route path="/"  component={HomeComponent} />
             </Switch>
         </Router>
     )
