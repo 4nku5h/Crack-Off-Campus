@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/Crack-Off-Campus/static/css/main.32d3039e.chunk.css",
-    "main.js": "/Crack-Off-Campus/static/js/main.11569eb9.chunk.js",
-    "main.js.map": "/Crack-Off-Campus/static/js/main.11569eb9.chunk.js.map",
+    "main.js": "/Crack-Off-Campus/static/js/main.36d97af7.chunk.js",
+    "main.js.map": "/Crack-Off-Campus/static/js/main.36d97af7.chunk.js.map",
     "runtime-main.js": "/Crack-Off-Campus/static/js/runtime-main.6577efd7.js",
     "runtime-main.js.map": "/Crack-Off-Campus/static/js/runtime-main.6577efd7.js.map",
     "static/css/2.fb17aa6d.chunk.css": "/Crack-Off-Campus/static/css/2.fb17aa6d.chunk.css",
@@ -20,6 +20,6 @@
     "static/css/2.fb17aa6d.chunk.css",
     "static/js/2.b86bc3fe.chunk.js",
     "static/css/main.32d3039e.chunk.css",
-    "static/js/main.11569eb9.chunk.js"
+    "static/js/main.36d97af7.chunk.js"
   ]
 }
