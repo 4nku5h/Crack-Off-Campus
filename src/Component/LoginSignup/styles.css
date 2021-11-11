@@ -28,16 +28,16 @@
 .Login_Page{
     border: 1px solid var(--BorderCard);
     display: flex;
-    width: 65vw;
-    height: 60vh;
+    width: 40vw;
+    height: 75vh;
     border-radius: 10px;
     background-color: rgb(255, 255, 255);
 }
 .Signup_Page{
     border: 1px solid var(--BorderCard);
     display: flex;
-    width: 65vw;
-    height: 60vh;
+    width: 40vw;
+    height: 75vh;
     border-radius: 10px;
     background-color: rgb(255, 255, 255);
 }
@@ -47,6 +47,10 @@
 .LoginSignUp_divider_second{
   
 }
+.flex_row{
+    display: flex;
+    justify-content: space-between;
+}
 #LoginSignUp_img{width: 100%; /* or any custom size */
     height: 100%; 
     object-fit:fill;
@@ -54,7 +58,8 @@
     border: 1px solid var(--BorderCard);
 }
 #Login_text{
-    padding: 10px;
+    padding-bottom: 10px;
+    padding-top: 20px;
     font-size: 1.5em;
     font-weight: 700;
 }
@@ -67,7 +72,9 @@
 }
 #LoginSignup_AppName{
     display: flex;
-    padding: 20px;
+    padding-left: 20px;
+    padding-top: 20px;
+    font-size: 3em;
     font-weight: 700;
 }
 #LoginSignup_span{
@@ -80,12 +87,13 @@
     margin-left: auto;
     margin-right: auto;
     margin-top: 20px;
-    width: 20vw;
+    width: 40%;
     font-size: 3.5em;
     border-radius: 30px;
-    background-color:rgb(67, 219, 36);
+    background-color:rgb(41, 41, 41);
     color: #ffffff;
     border: 1px solid var(--BorderCard);
+    margin-top: 50px;
     
 }
 
@@ -94,29 +102,56 @@
     margin-left: auto;
     margin-right: auto;
     margin-top: 20px;
-    width: 10vw;
+    width: 40%;
     font-size: 3.5em;
     border-radius: 30px;
-    background-color:rgb(255, 73, 60);
+    background-color:rgb(100, 82, 82);
     color: #ffffff;
     border: 1px solid var(--BorderCard);
     
 }
 #btn_attempt_login_signup:hover{
-    font-size: 4em;
+    width: 42%;
+    font-size: 3.9em;
 }
 #btn_attempt_login_signup_secondary:hover{
-    font-size: 4em;
+    width: 42%;
+    font-size: 3.9em;
 }
 .LoginSignup_btn_divider{
     display: flex;
     flex-direction: column;
 }
 #btn_close_LoginSignupComponent{
-    position: fixed;
-    right: 0;
-    top: 0;
-    width: 3vw;
-    height: 5vh;
-    font-size: 4em;
+    margin:5px;
+    border-radius: 30px;
+    border:transparent;
+    width: 7%;
+    height: 7%;
+    font-size: 5em;
+    font-weight: 700;
+    text-align: center;
+    background-color: white;
+    
+}
+#btn_close_LoginSignupComponent:hover{
+    font-size: 4.9em;
+}
+#input_fields{
+    width: 70%;
+    height: 3vw;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    background-color: rgb(236, 236, 236);
+    text-align: center;
+    border: 1px solid rgb(211, 211, 211);
+    margin-bottom: 20px;
+}
+#input_fields:hover{
+    width: 72%;
+    font-size: 1.1em;
+    background-color: rgb(196, 196, 196);
+
 }

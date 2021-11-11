@@ -10,42 +10,70 @@
 
 .Loading_inner {
     width: 100vw;
-    height: 100vh;
-    flex-direction: column;
+    height:fit-content;
+    flex-direction: row;
     justify-content: center;
     display: flex;
     font-size: 15em;
 
     
 }
-.anim{
+.BlurFilter{
     width: 100vw;
     height: 100vh;
     position: fixed;
     z-index: -1;
-    background-color: black;
+}
+.BlurFilter:hover{
+    
+    backdrop-filter: blur(0.1px);
+}
+.btns_multiple{
+    width: fit-content;
+    margin-bottom: 15px;
+    flex-direction: row;
+    justify-content: flex-end;
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+#h1_appName{
+    position: fixed;
+    left: 0;
+    top: 0;
+    margin: 30px;
+    color: white;
 }
 #btn_Login{
     padding: 5px;
-    margin-left: auto;
-    margin-right: auto;
     margin-top: 20px;
-    width: 30vw;
+    height: auto;
+    width: 20vw;
     font-size: 1rem;
+    font-weight: 600;
     border-radius: 30px;
-    background-color:rgb(255, 73, 60);
-    color: #ffffff;
+    color:rgb(0, 0, 0);
+    background-color: #ffffff;
     border: 1px solid var(--BorderCard);
+}
+#btn_Login:hover{
+    background-color:rgb(41, 41, 41);
+    color:rgb(255, 255, 255);
 }
 #btn_Continue{
     padding: 5px;
-    margin-left: auto;
-    margin-right: auto;
     margin-top: 20px;
-    width: 30vw;
+    width: 20vw;
     font-size: 1rem;
+    font-weight: 600;
     border-radius: 30px;
-    background-color:rgb(255, 73, 60);
-    color: #ffffff;
+    color:rgb(0, 0, 0);
+    background-color: #ffffff;
     border: 1px solid var(--BorderCard);
+    margin-right: 15px;
+}
+#btn_Continue:hover{
+    background-color:rgb(41, 41, 41);
+    color:rgb(255, 255, 255);
 }
