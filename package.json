@@ -1,5 +1,5 @@
 {
-  "homepage":"http://4nku5h.github.io/Crack-Off-Campus",
+  "homepage": "http://4nku5h.github.io/Crack-Off-Campus",
   "name": "crack-off-campus",
   "version": "0.1.0",
   "private": true,
@@ -16,13 +16,15 @@
     "react-redux": "^7.2.5",
     "react-router-dom": "^5.3.0",
     "react-scripts": "4.0.3",
+    "react-three-fiber": "^6.0.13",
     "redux": "^4.1.1",
     "redux-thunk": "^2.3.0",
+    "three": "^0.134.0",
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "predeploy":"npm run build",
-    "deploy":"gh-pages -d build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
