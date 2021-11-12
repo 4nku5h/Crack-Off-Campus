@@ -4,7 +4,8 @@ let initialState= {
         courseID:"",
         courseName:"",
         courseTotalQuestions:"",
-        courseRating:""
+        courseRating:"",
+        courseImage:""
     }]
   }
   

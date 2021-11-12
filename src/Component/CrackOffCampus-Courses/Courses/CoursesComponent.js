@@ -1,18 +1,55 @@
-import React from "react";
-
+import { render } from "@testing-library/react";
+import React, { Component } from "react";
+import { connect } from 'react-redux';
 //Api
 import { useDispatch } from 'react-redux';
+import { bindActionCreators } from "redux";
 import { fetchCoursesDetails } from "../../../redux/actions/actions";
 
-function CoursesComponent() {
-    const dispatch = useDispatch();
-    dispatch(fetchCoursesDetails())
-    
-    return (
-        <div className="CoursesComponent">
+class CoursesComponent extends Component {
+    //const dispatch = useDispatch();
+    //dispatch(fetchCoursesDetails())
 
-            <h2>Courses Component</h2>
-        </div>
-    )
+    constructor() {
+        super();
+        this.state = { data: null }
+        this.fetchCourses = this.fetchCourses.bind(this);
+        this.data = null;
+    }
+
+    componentDidMount() {
+        this.fetchCourses()
+    }
+
+    render() {
+        return (
+            <div className="CoursesComponent">
+
+                {this.props.coursesDetails.coursesData.map((course) => {
+                    return (
+                        <div>
+                            <img variant="top" style={{width: '40%', borderRadius: "10px", marginLeft: "0" }} src={course.courseImage} />
+                            <h2 >{course.courseName}</h2>
+                            <h2 >{course.courseTotalQuestions}</h2>
+                            <h2 >{course.courseRating}</h2>
+                        </div>
+                    )
+                })}
+            </div>
+        )
+    }
+
+    fetchCourses() {
+        this.props.fetchCoursesDetails();
+    }
 }
-export default CoursesComponent;
+
+
+
+function mapStateToProps(state) {
+    return { coursesDetails: state.coursesDetails }
+}
+function mapDispatchToProps(dispatch) {
+    return bindActionCreators({ fetchCoursesDetails: fetchCoursesDetails }, dispatch);
+}
+export default connect(mapStateToProps, mapDispatchToProps)(CoursesComponent);
