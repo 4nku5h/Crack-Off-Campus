@@ -1,12 +1,12 @@
-import { render } from "@testing-library/react";
+import "./styles.css";
 import React, { Component } from "react";
 import { connect } from 'react-redux';
 //Api
-import { useDispatch } from 'react-redux';
-import { bindActionCreators } from "redux";
-import { fetchCoursesDetails } from "../../../redux/actions/actions";
 
-class CoursesComponent extends Component {
+import { bindActionCreators } from "redux";
+import { fetchCoursesDetails } from "../../redux/actions/actions";
+
+class CoursesMainComponent extends Component {
     //const dispatch = useDispatch();
     //dispatch(fetchCoursesDetails())
 
@@ -52,4 +52,4 @@ function mapStateToProps(state) {
 function mapDispatchToProps(dispatch) {
     return bindActionCreators({ fetchCoursesDetails: fetchCoursesDetails }, dispatch);
 }
-export default connect(mapStateToProps, mapDispatchToProps)(CoursesComponent);
+export default connect(mapStateToProps, mapDispatchToProps)(CoursesMainComponent);

@@ -1,3 +1,4 @@
+import './styles.css';
 import React from 'react';
 import { HouseFill, CreditCard2FrontFill, BookHalf, FolderSymlinkFill , BriefcaseFill, TvFill, TerminalFill} from 'react-bootstrap-icons';
 
@@ -19,7 +20,7 @@ function NavbarComponent(props) {
 
                         <Link to="/">
                             <li class="nav-item active" >
-                                <HouseFill style={{ marginRight: "7px" }} id="logo_account" color="#000" size={20} />
+                                <HouseFill id="navbar_icon" />
                                 <a class="nav-link">Home</a>
 
                             </li>
@@ -28,7 +29,7 @@ function NavbarComponent(props) {
 
                         <Link to="/jobs">
                             <li class="nav-item active" >
-                                <BriefcaseFill style={{ marginRight: "7px" }} id="logo_account" color="#000" size={20} />
+                                <BriefcaseFill id="navbar_icon"/>
                                 <a class="nav-link">Jobs</a>
                             </li>
 
@@ -36,7 +37,7 @@ function NavbarComponent(props) {
 
                         <Link to="/seewe">
                             <li class="nav-item">
-                                <CreditCard2FrontFill style={{ marginRight: "7px" }} id="logo_account" color="#000" size={20} />
+                                <CreditCard2FrontFill id="navbar_icon"/>
                                 <a class="nav-link" >Seewe</a>
                             </li>
                         </Link>
@@ -44,28 +45,28 @@ function NavbarComponent(props) {
 
                         <Link to="/courses">
                             <li class="nav-item">
-                                <BookHalf style={{ marginRight: "7px" }} id="logo_account" color="#000" size={20} />
+                                <BookHalf id="navbar_icon"/>
                                 <a class="nav-link">Courses</a>
                             </li>
                         </Link>
 
                         <Link to="/hire">
                             <li class="nav-item">
-                                <FolderSymlinkFill style={{ marginRight: "7px" }} id="logo_account" color="#000" size={20} />
+                                <FolderSymlinkFill  id="navbar_icon" />
                                 <a class="nav-link">Hire</a>
                             </li>
                         </Link>
 
                         <Link to="/placement">
                             <li class="nav-item">
-                                <TvFill style={{ marginRight: "7px" }} id="logo_account" color="#000" size={20} />
+                                <TvFill  id="navbar_icon" />
                                 <a class="nav-link">Placement</a>
                             </li>
                         </Link>
 
                         <Link to="/compiler">
                             <li class="nav-item">
-                                <TerminalFill style={{ marginRight: "7px" }} id="logo_account" color="#000" size={20} />
+                                <TerminalFill  id="navbar_icon"/>
                                 <a class="nav-link">Compiler</a>
                             </li>
                         </Link>

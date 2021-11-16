@@ -1,3 +1,4 @@
+import './styles.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React from "react";
 import NavbarComponent from '../Navbar/NavbarComponent';
@@ -10,7 +11,7 @@ import { useDispatch } from 'react-redux';
 import { fetchJobsData } from "../../redux/actions/actions";
 
 
-function JobsComponent() {
+function JobsMainComponent() {
   const dispatch = useDispatch();
   dispatch(fetchJobsData())
 
@@ -27,7 +28,7 @@ function JobsComponent() {
     </div>
   )
 }
-export default JobsComponent;
+export default JobsMainComponent;
 //
 //<UserDetails  {...props.userDetails} />
 //<InformationComponent {...props}/>

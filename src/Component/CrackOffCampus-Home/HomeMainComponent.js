@@ -1,6 +1,7 @@
+import './styles.css';
 import React from "react";
 
-function HomeComponent() {
+function HomeMainComponent() {
     return (
         <div className="HomeComponent">
 
@@ -8,4 +9,4 @@ function HomeComponent() {
         </div>
     )
 }
-export default HomeComponent;
+export default HomeMainComponent;

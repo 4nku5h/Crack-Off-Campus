@@ -1,0 +1,165 @@
+.JobsComponent{
+    margin-top: 10vh;
+    height: 85vh;
+}
+/* Job Card Component start++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+.Card{
+    width: '100%';
+}
+
+.JobsCardComponent {
+  padding: auto;
+  border-radius: 10px;
+  background-color: #ffffff;
+  margin-bottom: 7px;
+  font-size: 3.5px;
+  max-width:45vw;
+  border: 1px solid var(--BorderCard);
+}
+.JobsCardComponent_divider {
+  width: 100%;
+  padding: 5%;
+  justify-content: start;
+  display: flex;
+}
+.JobsCardComponent_divider_first{
+  font-size: 1em;
+  width: 30%;
+}
+.JobsCardComponent_divider_second{
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+}
+.job_apply_Button{
+  display: flex;
+  color: #0C67C2;
+  font-size: 5em;
+  font-style:bold;
+  align-items: flex-start;
+}
+
+.jobsList {
+  height: auto;
+  flex: 1;
+  max-width: 50%;
+  margin: 10px;
+}
+.job_postedDate{
+  align-items: flex-start;
+  color: #087844;
+  font-size: 4em;
+  font-weight: 700;
+}
+.cardTitle{
+  margin-top: 8%;
+  font-size: 3em;
+}
+.job_apply_Button:hover {
+  text-decoration: underline;
+
+}
+.list-group-flush{
+  max-height: 3px;
+  font-size: 4em;
+  color:#817f7f ;
+  color: var(--FontColorLightGray);
+}
+.JobComponent_Details{
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+/* Job Card Component  END ------------------------------------------------------------------------------------*/
+
+
+
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/* Job Details Float Component  START ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+.JobDetailsFloat{
+  margin: 20px;
+  padding: 15px;
+  width: 20vw;
+  background-color: #ffffff;
+  border-radius: 10px;
+  position: fixed;
+  font-size: 5px;
+  top: 9vh;
+  border: 1px solid var(--BorderCard);
+}
+#JobFloat_Title{
+  font-size: 3.7em;
+  font-weight: bold;
+  color: var(--FontColorDarkGray);
+
+}
+#JobFloat_items{
+  font-size: 3em;
+}
+/* Job Details Float Component  END ------------------------------------------------------------------------------------*/
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+
+/* Job Filter  Component  START++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+.JobFilterFloat{
+  margin: 20px;
+  padding: 15px;
+  width: 25vw;
+  background-color: #ffffff;
+  border-radius: 10px;
+  position: fixed;
+  right: 0;
+  top: 9vh;
+  bottom: 0vh;
+  font-size: 0.7em;
+  border: 1px solid var(--BorderCard);
+
+}
+#JobFilter_Title{
+  font-size: 2em;
+  font-weight: bold;
+  color: var(--FontColorDarkGray);
+}
+#JobFilter_items{
+  font-size: 1.2em;
+  color: var(--FontColorLightGray);
+}
+.JobFilter_divider_column{
+  padding: 10px;
+  justify-content: flex-start;
+  display: flex;
+  margin-left: 15px;
+}
+#filter_company_checkbox{
+  margin-right: 10px;
+}
+#JobFilter_Type{
+  display: flex;
+  align-items: flex-start;
+  font-size: 1.7em;
+  margin-left: 5px;
+  color: var(--FontColorDarkGray);
+  font-weight: 600;
+}
+/* Job Filter  Component  END++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+/* Information Component  START++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+.Information {
+  margin: 10px;
+  max-width: 15vw;
+  position: fixed;
+  top: 10vh;
+  right: 0;
+  z-index: 1;
+}
+/* Information Component  END ------------------------------------------------------------------------------------*/

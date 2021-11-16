@@ -1,6 +1,7 @@
+import './styles.css';
 import React from "react";
 
-function SeeweComponent() {
+function SeeweMainComponent() {
     return (
         <div className="SeeweComponent">
 
@@ -8,4 +9,4 @@ function SeeweComponent() {
         </div>
     )
 }
-export default SeeweComponent;
+export default SeeweMainComponent;

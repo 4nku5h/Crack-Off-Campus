@@ -1,5 +1,5 @@
 import React from "react";
-import { HouseFill} from 'react-bootstrap-icons';
+import { XCircleFill} from 'react-bootstrap-icons';
 
 let ur = 'https://previews.123rf.com/images/dragonstock/dragonstock1907/dragonstock190700067/128815567-school-stationery-items-on-yellow-background-back-to-school-concept-.jpg'
 function SignUp_UI(props) {
@@ -9,7 +9,7 @@ function SignUp_UI(props) {
       <div className="LoginSignUp_divider_first">
       <div className="flex_row">
           <h3 id="LoginSignup_AppName">Crack off campus</h3>
-          <HouseFill id="btn_close_LoginSignupComponent" style={{ marginRight: "7px" }} id="logo_account" color="#000" size={30} onClick={() => props.handleCloseComponent()}/>
+          <XCircleFill id="btn_close_LoginSignupComponent"  onClick={() => props.handleCloseComponent()}/>
         </div>
         <form className="LoginSignUp_form">
           <p id="Login_text">Signup</p>

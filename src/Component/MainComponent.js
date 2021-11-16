@@ -1,13 +1,12 @@
 import React from "react";
 import NavbarComponent from "./Navbar/NavbarComponent";
-import JobsComponent from "./CrackOffCampus-Jobs/JobsComponent";
-import SeeweComponent from "./CrackOffCampus-SeeWe/SeeWe/SeeweComponent";
-import CoursesComponent from "./CrackOffCampus-Courses/Courses/CoursesComponent";
-import ReferalComponent from "./CrackOffCampus-Referals/Referals/ReferalComponent";
-import HomeComponent from "./CrackOffCampus-Home/HomeComponent";
-import PlacementComponent from "./CrackOffCampus-Placement/PlacementGuaranteed/PlacementComponent";
-import CompilerComponent from "./CrackOffCampus-Compiler/CompilerComponent";
-import LoginSignupComponent from "./LoginSignup/LoginSignupComponent";
+import JobsMainComponent from "./CrackOffCampus-Jobs/JobsMainComponent";
+import SeeweMainComponent from "./CrackOffCampus-SeeWe/SeeweMainComponent";
+import CoursesMainComponent from "./CrackOffCampus-Courses/CoursesMainComponent";
+import HireMainComponent from "./CrackOffCampus-Hire/HireMainComponent";
+import HomeMainComponent from "./CrackOffCampus-Home/HomeMainComponent";
+import PlacementMainComponent from "./CrackOffCampus-Placement/PlacementMainComponent";
+import CompilerMainComponent from "./CrackOffCampus-Compiler/CompilerMainComponent";
 
 //router
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
@@ -17,13 +16,13 @@ function MainComponent() {
             <NavbarComponent />
             <Switch>
                 
-                <Route path="/jobs" exact component={JobsComponent} />
-                <Route path="/seewe" exact component={SeeweComponent} />
-                <Route path="/courses" exact component={CoursesComponent} />
-                <Route path="/hire" exact component={ReferalComponent} />
-                <Route path="/placement" exact component={PlacementComponent} />
-                <Route path="/compiler" exact component={CompilerComponent} />
-                <Route path="/"  component={HomeComponent} />
+                <Route path="/jobs" exact component={JobsMainComponent} />
+                <Route path="/seewe" exact component={SeeweMainComponent} />
+                <Route path="/courses" exact component={CoursesMainComponent} />
+                <Route path="/hire" exact component={HireMainComponent} />
+                <Route path="/placement" exact component={PlacementMainComponent} />
+                <Route path="/compiler" exact component={CompilerMainComponent} />
+                <Route path="/"  component={HomeMainComponent} />
             </Switch>
         </Router>
     )
