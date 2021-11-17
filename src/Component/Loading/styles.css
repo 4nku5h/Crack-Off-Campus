@@ -55,7 +55,8 @@
     border-radius: 30px;
     color:rgb(0, 0, 0);
     background-color: #ffffff;
-    border: 1px solid var(--BorderCard);
+    border: 1px solid rgb(54, 54, 54);;
+    transition: all 0.6s;
 }
 #btn_Login:hover{
     background-color:rgb(41, 41, 41);
@@ -70,8 +71,9 @@
     border-radius: 30px;
     color:rgb(0, 0, 0);
     background-color: #ffffff;
-    border: 1px solid var(--BorderCard);
+    border: 1px solid rgb(54, 54, 54);;
     margin-right: 15px;
+    transition: all 0.6s;
 }
 #btn_Continue:hover{
     background-color:rgb(41, 41, 41);

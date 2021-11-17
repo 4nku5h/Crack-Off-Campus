@@ -2,3 +2,85 @@
     margin-top: 10vh;
     height: 100%;
 }
+
+.CourseCardComponent{
+    padding: 20px;
+    padding-bottom: 40px;
+    height: auto;
+}
+
+.CourseCardComponent_inner{
+    margin: 10px;
+    height: 120%;
+    transition: all 0.5s;
+    backdrop-filter: blur(0px);
+}
+
+.CourseCardComponent_inner:hover{
+    height: 130%;
+}
+
+#CourseCardComponent_image{
+     position: fixed;
+     z-index: -1;
+     border-radius: 10px;
+     left: 0;
+     right: 0;
+     top: 0;
+     bottom: 0;
+     width: 100%;
+     height: 100%;
+     border-radius: 10px;
+     border: 1px solid rgb(197, 197, 197);
+}
+
+
+#CourseCardComponent_btnOpen{
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    width: 60px;
+    height: auto;
+    color: rgb(167, 166, 166);
+    transition: all 0.7s;
+}
+#CourseCardComponent_btnOpen:hover{
+    width: 65px;
+    color: rgb(32, 230, 6);
+}
+.CourseCardComponent_divider{
+ display: flex;
+ width: 100%;
+ height: 100%;
+ justify-content: space-between;
+ opacity: 0;
+ backdrop-filter: blur(20px);
+ border-radius: 10px;
+ transition: all 0.7s;
+}
+.CourseCardComponent_divider:hover{ 
+  opacity: 1;
+}
+.CourseCardComponent_divider_first{
+    padding: 10px;
+    padding-top:15px;
+    text-align: left;
+    width: 50%;
+}
+.CourseCardComponent_divider_second{
+    width: 20%;
+}
+#CourseCardComponent_courseName{
+    color: rgb(255, 255, 255);
+    font-weight: 900;
+    -webkit-text-stroke: 1px rgb(105, 105, 105);
+}
+#CourseCardComponent_courseTotalQuestions{
+    color: rgb(255, 255, 255);
+    -webkit-text-stroke: 1px rgb(58, 58, 58);
+}
+#CourseCardComponent_courseRating{
+    margin: 1px;
+    color: rgb(255, 238, 0);
+    -webkit-text-stroke: 1px rgb(41, 41, 41);
+}

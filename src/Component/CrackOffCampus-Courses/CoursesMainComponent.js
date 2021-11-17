@@ -5,6 +5,8 @@ import { connect } from 'react-redux';
 
 import { bindActionCreators } from "redux";
 import { fetchCoursesDetails } from "../../redux/actions/actions";
+import CourseCardComponent from "./CoursesCardComponent/CoursesCardComponent";
+import { Row } from "react-bootstrap";
 
 class CoursesMainComponent extends Component {
     //const dispatch = useDispatch();
@@ -24,17 +26,14 @@ class CoursesMainComponent extends Component {
     render() {
         return (
             <div className="CoursesComponent">
+                <Row xs={3}>
+                    {this.props.coursesDetails.coursesData.map((course) => {
+                        return (
+                            <CourseCardComponent {...course} />
 
-                {this.props.coursesDetails.coursesData.map((course) => {
-                    return (
-                        <div>
-                            <img variant="top" style={{width: '40%', borderRadius: "10px", marginLeft: "0" }} src={course.courseImage} />
-                            <h2 >{course.courseName}</h2>
-                            <h2 >{course.courseTotalQuestions}</h2>
-                            <h2 >{course.courseRating}</h2>
-                        </div>
-                    )
-                })}
+                        )
+                    })}
+                </Row>
             </div>
         )
     }
