@@ -5,6 +5,7 @@ import {information_announcementDetails} from "./data/information_announcement_r
 import { jobsData } from "./data/jobsData_reducer";
 import {isAccessWithoutLogin} from "./state/LoginSignup_reducer";
 import { coursesDetails } from "./data/courses_reducer";
+import {isQuizComponentVisible} from "./state/Courses_reducer";
 import { combineReducers } from "redux";
 
 const rootReducer = combineReducers({
@@ -14,7 +15,8 @@ const rootReducer = combineReducers({
     information_announcementDetails:information_announcementDetails,
     jobsData:jobsData,
     isAccessWithoutLogin:isAccessWithoutLogin,
-    coursesDetails:coursesDetails
+    coursesDetails:coursesDetails,
+    isQuizComponentVisible:isQuizComponentVisible
   });
   
   export default rootReducer;

@@ -87,3 +87,10 @@ export const setCoursesData = (data) => {
     payload: data
   };
 }
+////////////////////////Courses_state/////////////////////////
+export const setQuizComponentVisivility= (data) => {
+  return {
+    type: 'QUIZ_COMPONENT_VISIBILITY',
+    payload: data
+  };
+}

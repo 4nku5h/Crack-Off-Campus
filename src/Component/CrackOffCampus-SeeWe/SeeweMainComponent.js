@@ -3,9 +3,9 @@ import React from "react";
 
 function SeeweMainComponent() {
     return (
+        
         <div className="SeeweComponent">
-
-            <h2>seewe component</h2>
+            <h2>Coming Soon</h2>
         </div>
     )
 }
