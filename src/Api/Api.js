@@ -1,7 +1,7 @@
 import axios from "axios";
 
-/////////////////////////// LOGIN ////////////////////////////////////
-const loginEndpiont = 'https://raw.githubusercontent.com/4nku5h/API_TEST/main/login.json';
+/////////////////////////// LOGIN ////////////////////////////////////+
+const loginEndpiont = 'https://raw.githubusercontent.com/4nku5h/API_TEST/main/LOGIN_SIGNUP/login.json';
 
 function getLoginApiReference() {
     return axios.get(loginEndpiont);
@@ -12,8 +12,8 @@ export {
 };
 
 
-////////////////////////////// JOBS DATA /////////////////////////////////
-const jobsEndPoint = 'https://raw.githubusercontent.com/4nku5h/API_TEST/main/jobs.json';
+////////////////////////////// JOBS DATA /////////////////////////////////+
+const jobsEndPoint = 'https://raw.githubusercontent.com/4nku5h/API_TEST/main/JOBS/jobs.json';
 
 function getJobsApiReference() {
     return axios.get(jobsEndPoint);
@@ -24,8 +24,8 @@ export {
 };
 
 
-//////////////////////////////// USER DETAILS ///////////////////////////////
-const userDetailsEndpiont = 'https://raw.githubusercontent.com/4nku5h/API_TEST/main/user.json';
+//////////////////////////////// USER DETAILS /////////////////////////////// user dynamic id NTBI
+const userDetailsEndpiont = 'https://raw.githubusercontent.com/4nku5h/API_TEST/main/USERDATA/1.json';
 
 function getUserApiReference() {
     return axios.get(userDetailsEndpiont);
@@ -36,8 +36,8 @@ export {
 };
 
 
-//////////////////////////////// COURSES DATA ///////////////////////////////
-const coursesDataEndpiont = 'https://raw.githubusercontent.com/4nku5h/API_TEST/main/courses.json';
+//////////////////////////////// COURSES DATA ///////////////////////////////+
+const coursesDataEndpiont = 'https://raw.githubusercontent.com/4nku5h/API_TEST/main/Courses/courses.json';
 
 function getCoursesApiReference() {
     return axios.get(coursesDataEndpiont);
@@ -45,4 +45,15 @@ function getCoursesApiReference() {
 
 export {
     getCoursesApiReference,
+};
+
+/////////////////////////// QUIZ DATA ///////////////////////////////////////+
+const quizDataEndpoint ='https://raw.githubusercontent.com/4nku5h/API_TEST/main/Courses/QUIZ/';
+
+function getQuizApiReference(name) {
+    return axios.get(quizDataEndpoint+name+'.json');
+}
+
+export {
+    getQuizApiReference,
 };

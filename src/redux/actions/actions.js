@@ -1,4 +1,4 @@
-import { getJobsApiReference, getUserApiReference, getLoginApiReference, getCoursesApiReference } from '../../Api/Api';
+import { getJobsApiReference, getUserApiReference, getLoginApiReference, getCoursesApiReference,getQuizApiReference } from '../../Api/Api';
 
 export const fetchLoginDetails = () => {
   return (dispatch) => {
@@ -36,6 +36,16 @@ export const fetchCoursesDetails = () => {
       })
   }
 }
+
+export const fetchQuizData = (quiz_name) => {
+  return (dispatch) => {
+    getQuizApiReference(quiz_name)
+      .then(result => {
+        dispatch(setQuizData(result.data))
+      })
+  }
+}
+
 /////////////////////////////[ API ]////////////////////////////////////////
 
 export const setAccessWithoutLogin = (data) => {
@@ -91,6 +101,18 @@ export const setCoursesData = (data) => {
 export const setQuizComponentVisivility= (data) => {
   return {
     type: 'QUIZ_COMPONENT_VISIBILITY',
+    payload: data
+  };
+}
+export const setCurrentQuizID= (data) => {
+  return {
+    type: 'QUIZ_ID',
+    payload: data
+  };
+}
+export const setQuizData = (data) => {
+  return {
+    type: 'QUIZ_DATA',
     payload: data
   };
 }

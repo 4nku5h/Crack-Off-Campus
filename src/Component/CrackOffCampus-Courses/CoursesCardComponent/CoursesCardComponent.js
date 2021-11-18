@@ -1,14 +1,16 @@
 import {React} from 'react';
 import { useDispatch } from 'react-redux';
 import { PlayCircleFill, StarFill } from 'react-bootstrap-icons';
-import {setQuizComponentVisivility} from '../../../redux/actions/actions';
+import { setQuizComponentVisivility, fetchQuizData} from '../../../redux/actions/actions';
 
 
 
 function CourseCardComponent(course) {
     const dispatch = useDispatch();
     function handleOpenClick() {
+        dispatch(fetchQuizData(course.courseID));
         dispatch(setQuizComponentVisivility(true));
+        
     }
 
     return (

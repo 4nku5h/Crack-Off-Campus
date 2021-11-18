@@ -93,3 +93,220 @@
     margin: 1px;
     color: rgb(255, 255, 255);
 }
+/*/////////////////////////////////// QUIZ COMPONENT ////////////////////////////////////////////////////*/
+.QuizComponent_FULLSCREEN{
+    background-image: url(https://images.unsplash.com/photo-1510070112810-d4e9a46d9e91?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80);
+
+}
+/*/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/*/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/*////////////////////////////////////// QUESTIONS COMPONENT //////////////////////////////////////////////////////////////*/
+p{
+    font-size: 30px;
+  }
+  span{
+    font-size: 25px;
+  }
+  #btn{
+    color: #000000;
+    padding: 10px;
+    background-color: #ffffff;
+    border-radius:10px;
+    border-color: #b19f9f7c;
+    transition: all cubic-bezier(0.39, 0.575, 0.565, 1) 0.7s;
+    
+  }
+  #btn.right_answer{
+    
+    
+    background-color: #3cff00;
+  }
+  #btn.wrong_answer{
+    color: #ffffff;
+    animation: shake 0.5s;
+    background-color: #ff2a2a;
+  }
+  @keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+  }
+  #Resultcorrect{
+    width: 100%;
+    font-size: 20px;
+    color: #3cff00;
+    text-Shadow:-1px -1px 0 #000;
+  }
+  #Resultwrong{
+    width: 100%;
+    font-size: 20px; 
+    color: #ff2a2a;
+    text-Shadow:-1px -1px 0 #000;
+  }
+  .answer-section{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 50%;
+  }
+  .questions-section{
+    font-size: 10px;
+    width: 50%;
+  }
+  .QuestionCount{
+    font-size: 40px;
+    display: flex;
+    align-items:baseline;
+  }
+  #question{
+    margin: 60px;
+    margin-top: 5px;
+    margin-left: 0;
+    display: flex;
+    text-align: left;
+  }
+  .checkbox{
+    margin: 60px;
+    margin-top: 5px;
+    margin-left: 0;
+    margin-bottom: 10px;
+    display: flex;
+    text-align: left;
+  }
+  
+  .Result{
+    padding: 30px;
+    width:100%;
+    border-radius:15px;
+    display: flex;
+    flex-direction: row;
+    justify-content:left;
+    transition: all ease-in-out 0.1s;
+    border-radius:20px;
+    background-color: #c4c4c4ce;
+  }
+  .right_div{
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+  }
+  .wrong_div{
+    
+    width: 50%;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: row;
+  }
+  .LiveResults{
+    position: fixed;
+    top: 10px;
+    right: 25px;
+    margin: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: max-content;
+    margin-bottom: 20px;
+  }
+  
+  .quiz{
+    display: flex;
+    color : #000000;
+    background-color: #c4c4c4de;
+    padding:80px;
+    border-radius:25px;
+  }
+  .Parent{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    margin-bottom: auto;
+    width: 70%;
+    height: 100%;
+  }
+  .Next{
+    margin-top: 30px;
+    margin-left: auto; 
+    margin-right: auto; 
+    padding: 15px;
+    font-size: 30px;
+    color: #ffffff;
+    width: 60px;
+    height: 60px;
+    border-radius:60px;
+    background-color: #0a1831;
+  }
+  
+  
+  .ScoreCard{
+    transition: all 0.7s;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    color : #000000;
+    background-color: #c4c4c4;
+    padding:80px;
+    border-radius:25px;
+  }
+  
+  
+  
+  
+  .Nav{
+    display: flex;
+    flex-direction: row;
+    background-color: #0a1831e8;
+  }
+  .Account{
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    font-size: 15px;
+    margin-left: auto;
+    margin-right: 10px;
+    padding: 5px;
+    max-width: max-content;
+    border-radius:15px;
+  }
+  #UserName{
+    width: 20px;
+    margin-left: 10px;
+    font-size: 15px;
+  }
+  #logo_account{
+  }
+  #select_option{
+    margin-left: 10px;
+    color: #ffffff;
+  }
+  .Nav_Appname{
+    
+    color: #ffffff;
+  }
+  #App_Name{
+    font-family: 'Brush Script MT', cursive;
+    margin-left: 15px;
+    font-size: 20px;
+  }
+  #reload{
+  transition: all 0.7s;
+  }
+  .Quiz_Panel_Main{
+    transition: all 0.7s;
+  }
+  #BestScore{
+    color: #2b2b2b;
+    font-size: 18px;
+      margin-Left:'0';
+      margin-Right:'auto';
+  }
+  #CurrentScore{
+    margin-bottom: 40px;
+  }
