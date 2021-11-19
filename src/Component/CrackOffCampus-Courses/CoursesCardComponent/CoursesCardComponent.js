@@ -9,6 +9,7 @@ function CourseCardComponent(course) {
     const dispatch = useDispatch();
     function handleOpenClick() {
         dispatch(fetchQuizData(course.courseID));
+        console.log(course.courseID)
         dispatch(setQuizComponentVisivility(true));
         
     }

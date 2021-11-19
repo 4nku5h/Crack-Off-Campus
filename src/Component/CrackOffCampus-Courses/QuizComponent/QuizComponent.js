@@ -4,9 +4,10 @@ import { useDispatch, useSelector } from 'react-redux';
 import { FullScreen, useFullScreenHandle } from "react-full-screen";
 import { setQuizComponentVisivility, setQuizData } from '../../../redux/actions/actions';
 import QuestionsComponent from './QuestionsComponent';
+import AnimationComponent from "./../../Loading/AnimationComponent/AnimationComponent";
 
 function QuizComponent() {
-    const quizData = useSelector(state => state.quizData.quiz_data);
+    const quizData = useSelector(state => state.quizData);
     const dispatch = useDispatch();
     const handle = useFullScreenHandle();
     useEffect(() => {
@@ -27,6 +28,7 @@ function QuizComponent() {
     return (
         <div>
             <FullScreen className="QuizComponent_FULLSCREEN" handle={handle}>
+                <AnimationComponent />
                 <QuestionsComponent {...quizData}/>
             </FullScreen>
         </div>

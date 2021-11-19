@@ -54,9 +54,9 @@
  height: 100%;
  justify-content: space-between;
  opacity: 0;
- backdrop-filter: blur(10px);
  border-radius: 10px;
  transition: all 0.7s;
+ backdrop-filter: blur(10px);
 }
 .CourseCardComponent_divider:hover{ 
   opacity: 1;
@@ -95,8 +95,7 @@
 }
 /*/////////////////////////////////// QUIZ COMPONENT ////////////////////////////////////////////////////*/
 .QuizComponent_FULLSCREEN{
-    background-image: url(https://images.unsplash.com/photo-1510070112810-d4e9a46d9e91?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80);
-
+  background-color: rgb(224, 224, 224);
 }
 /*/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 /*/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
@@ -104,22 +103,27 @@
 p{
     font-size: 30px;
   }
-  span{
-    font-size: 25px;
+  #span{
+    color: rgb(255, 238, 0);
+    margin: 5px;
+    font-size: 15px;
   }
   #btn{
     color: #000000;
     padding: 10px;
     background-color: #ffffff;
     border-radius:10px;
-    border-color: #b19f9f7c;
-    transition: all cubic-bezier(0.39, 0.575, 0.565, 1) 0.7s;
+    border-color: #e6e6e67c;
+    transition: all  0.7s;
+    
+  }
+  #btn:hover{
+    background-color: #cacaca;
     
   }
   #btn.right_answer{
-    
-    
     background-color: #3cff00;
+    color: #000000;
   }
   #btn.wrong_answer{
     color: #ffffff;
@@ -142,14 +146,14 @@ p{
   #Resultcorrect{
     width: 100%;
     font-size: 20px;
-    color: #3cff00;
-    text-Shadow:-1px -1px 0 #000;
+    color: #51fc02;
+    font-weight: 800;
   }
   #Resultwrong{
     width: 100%;
-    font-size: 20px; 
-    color: #ff2a2a;
-    text-Shadow:-1px -1px 0 #000;
+    font-size: 20px;
+    font-weight: 800;
+    color: #ff0000;
   }
   .answer-section{
     display: flex;
@@ -183,15 +187,15 @@ p{
   }
   
   .Result{
-    padding: 30px;
+    padding: 20px;
     width:100%;
-    border-radius:15px;
     display: flex;
     flex-direction: row;
     justify-content:left;
     transition: all ease-in-out 0.1s;
-    border-radius:20px;
-    background-color: #c4c4c4ce;
+    background-color: #fcfcfc17;
+    border: 1px solid rgb(117, 117, 117);
+    border-radius:25px;
   }
   .right_div{
     width: 50%;
@@ -207,29 +211,54 @@ p{
   }
   .LiveResults{
     position: fixed;
-    top: 10px;
-    right: 25px;
+    bottom: 10px;
+    right: 0;
+    left: 0;
     margin: 20px;
     margin-left: auto;
     margin-right: auto;
-    max-width: max-content;
+    width: 30%;
     margin-bottom: 20px;
   }
-  
-  .quiz{
+  .Quiz_Panel_Main{
     display: flex;
-    color : #000000;
-    background-color: #c4c4c4de;
+    flex-direction: row;
+    transition: all 0.7s;
+  }
+  .quiz{
+    width: 80vw;
+    height: 60vh;
+    display: flex;
+    color : #ffffff;
     padding:80px;
+    background-color: #fcfcfc17;
+    border: 1px solid rgb(117, 117, 117);
     border-radius:25px;
+    margin-top: 70px;
+  }
+  .Quiz_NAME{
+    position: fixed;
+    font-size: 35px;
+    left: 10px;
+    right: 10px;
+    margin-right: auto;
+    color: #ffffff;
+    font-weight: 900;
+      
+  }
+  .Parent_MAIN{
+    width: 100%;
+    height: 90%;
+    backdrop-filter: blur(15px);
   }
   .Parent{
+    width: 100vw;
     margin-left: auto;
     margin-right: auto;
     margin-top: 100px;
     margin-bottom: auto;
-    width: 70%;
-    height: 100%;
+    width: 80%;
+    height: 80vh;
   }
   .Next{
     margin-top: 30px;
@@ -246,17 +275,21 @@ p{
   
   
   .ScoreCard{
+    height: 60%;
     transition: all 0.7s;
     align-items: center;
     display: flex;
     flex-direction: column;
-    color : #000000;
-    background-color: #c4c4c4;
-    padding:80px;
-    border-radius:25px;
   }
-  
-  
+  .div_ScoreCard{
+    height: 60%;
+    color : #ffffff;
+    background-color: #fcfcfc17;
+    padding:80px;
+    border: 1px solid rgb(49, 49, 49);
+    border-radius:25px;
+    margin-top: 150px;
+  }
   
   
   .Nav{
@@ -298,11 +331,9 @@ p{
   #reload{
   transition: all 0.7s;
   }
-  .Quiz_Panel_Main{
-    transition: all 0.7s;
-  }
+  
   #BestScore{
-    color: #2b2b2b;
+    color: #ffee00;
     font-size: 18px;
       margin-Left:'0';
       margin-Right:'auto';
@@ -310,3 +341,21 @@ p{
   #CurrentScore{
     margin-bottom: 40px;
   }
+  #quiz_Note{
+    margin: 5px;
+    font-size: 15px;
+    color: rgb(255, 255, 255);
+  }
+  #quiz_exit{
+    font-size: 29px;
+    transition: all 0.7s;
+    color:#ffffff;
+  }
+  #quiz_exit:hover{
+    font-size: 39px;
+    color:#ff3232;
+  }
+  #checkbox_showResult{
+    font-size: 12px;
+  }
+  

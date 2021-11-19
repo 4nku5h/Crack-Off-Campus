@@ -116,3 +116,10 @@ export const setQuizData = (data) => {
     payload: data
   };
 }
+
+export const setCurrentSelectdComponent = (data) => {
+  return {
+    type: 'NAVBAR_COMPONENT_TOGGLE',
+    payload: data
+  };
+}
