@@ -8,7 +8,7 @@
     z-index: 1;
     background-color: #ffffff;
     width: 100vw;
-    height: 70px;
+    height: 9vh;
     padding: 7px;
     border: 1px solid var(--BorderCard);
 }
@@ -40,12 +40,16 @@
     font-size: 15px;
 }
 .NAV_ITEM_UNDERLINE{
-    transition: all 0.8s;
-    width: 100%;
+    background-color: black;
+    margin: 0 auto;
+    transition: all 0.7s;
+    width: 0%;
     height: 2px;
+    opacity: 0;
 }
 .NAV_ITEM_UNDERLINE.active{ 
-    background-color: black;
+    width: 100%;
+    opacity: 1;
 }
 
 #React_Router_Link{

@@ -1,4 +1,4 @@
-import { getJobsApiReference, getUserApiReference, getLoginApiReference, getCoursesApiReference,getQuizApiReference } from '../../Api/Api';
+import { getJobsApiReference, getUserApiReference, getLoginApiReference, getCoursesApiReference,getQuizApiReference, getCommunityPostsApiReference } from '../../Api/Api';
 
 export const fetchLoginDetails = () => {
   return (dispatch) => {
@@ -46,6 +46,14 @@ export const fetchQuizData = (quiz_name) => {
   }
 }
 
+export const fetchCommunityPostsData = () => {
+  return (dispatch) => {
+    getCommunityPostsApiReference()
+      .then(result => {
+        dispatch(setCommunityPostsData(result.data))
+      })
+  }
+}
 /////////////////////////////[ API ]////////////////////////////////////////
 
 export const setAccessWithoutLogin = (data) => {
@@ -120,6 +128,13 @@ export const setQuizData = (data) => {
 export const setCurrentSelectdComponent = (data) => {
   return {
     type: 'NAVBAR_COMPONENT_TOGGLE',
+    payload: data
+  };
+}
+
+export const setCommunityPostsData = (data) => {
+  return {
+    type: 'COMMUNITY_POST_DATA',
     payload: data
   };
 }

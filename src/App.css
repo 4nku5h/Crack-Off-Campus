@@ -2,6 +2,7 @@
   text-align: center;
 }
 html{
+  overflow: hidden;
 }
 .App-logo {
   height: 40vmin;

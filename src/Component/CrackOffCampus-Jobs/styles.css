@@ -1,6 +1,6 @@
 .JobsComponent{
-    margin-top: 10vh;
-    height: 85vh;
+  margin-top: 10vh;
+    height: 90vh;
 }
 /* Job Card Component start++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 .Card{
@@ -8,7 +8,6 @@
 }
 
 .JobsCardComponent {
-  padding: auto;
   border-radius: 10px;
   background-color: #ffffff;
   margin-bottom: 7px;
@@ -40,10 +39,13 @@
 }
 
 .jobsList {
-  height: auto;
   flex: 1;
   max-width: 50%;
-  margin: 10px;
+  overflow-y: scroll;
+  height: 90vh;
+}
+::-webkit-scrollbar { 
+  display: none;
 }
 .job_postedDate{
   align-items: flex-start;
@@ -80,7 +82,7 @@
 /* //////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 /* Job Details Float Component  START ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 .JobDetailsFloat{
-  margin: 20px;
+  margin-top: 9px;
   padding: 15px;
   width: 20vw;
   background-color: #ffffff;
@@ -108,7 +110,7 @@
 
 /* Job Filter  Component  START++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 .JobFilterFloat{
-  margin: 20px;
+  margin-top: 9px;
   padding: 15px;
   width: 25vw;
   background-color: #ffffff;
@@ -155,7 +157,6 @@
 
 /* Information Component  START++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 .Information {
-  margin: 10px;
   max-width: 15vw;
   position: fixed;
   top: 10vh;

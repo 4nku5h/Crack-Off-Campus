@@ -1,5 +1,83 @@
 .HomeComponent {
-    margin-top: 10vh;
-    height: 85vh;
-    /*font-size: 4px;*/
+    background-color: var(--BackgroundColor);
+    margin-top: 7vh;
+    height: 85%;
+}
+
+.PostComponent_COMMUNITY_POSTS{
+    width: 100%;
+    height: 700px;
+    overflow-y: scroll;
+}
+::-webkit-scrollbar { 
+     width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+.PostComponent_Loading{
+    transition: all 0.5s;
+    background-color: black;
+    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 30px;
+    border:dotted;
+    height: 4px;
+    width: 0%;
+    opacity: 0;
+}
+.PostComponent_Loading.active{
+    opacity: 1;
+    width: 40%;
+    color: rgb(255, 255, 255);
+}
+/*////////////////////////////////////// POST ////////////////////////////////////////////*/
+.POST_CARD_COMPONENT{
+    background-color: white;
+    border-radius: 10px;
+    border: 1px solid rgb(214, 214, 214);
+    width: 70%;
+    text-align: left;
+    padding: 30px;
+    margin: 30px;
+}
+#post_title{
+    font-size: 25px;
+}
+.post_user{
+    width: fit-content;
+    display: flex;
+    text-align: right;
+    margin-left: auto;
+    margin-right: 0px;
+}
+#post_userProfileImage{
+    margin-top: 5px;
+    margin-right: 5px;
+}
+#post_userID{
+    font-size: 20px;
+}
+#post_rating{
+
+}
+#post_date{
+  font-size: 12px;
+  margin-left: auto;
+  margin-right: 0;
+  padding: 5px;
+  width: fit-content;
+  background-color: rgb(218, 218, 218);
+  border-radius: 20px;
+  color: rgb(0, 0, 0);
+}
+#post_data{
+
+    font-size: 18px;
 }

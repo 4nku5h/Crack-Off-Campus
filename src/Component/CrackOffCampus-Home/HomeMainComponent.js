@@ -1,11 +1,10 @@
 import './styles.css';
 import React from "react";
-
+import PostComponent from './PostComponent/PostComponent';
 function HomeMainComponent() {
     return (
         <div className="HomeComponent">
-
-            <h2>Home Component</h2>
+            <PostComponent />
         </div>
     )
 }

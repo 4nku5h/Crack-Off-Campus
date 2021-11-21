@@ -57,3 +57,16 @@ function getQuizApiReference(name) {
 export {
     getQuizApiReference,
 };
+
+////////////////////////////////// HOME-POSTS //////////////////////////////////////////
+
+
+const communityPostsDataEndpoint ='https://raw.githubusercontent.com/4nku5h/API_TEST/main/HOME/home_posts.json';
+
+function getCommunityPostsApiReference() {
+    return axios.get(communityPostsDataEndpoint);
+}
+
+export {
+    getCommunityPostsApiReference,
+};

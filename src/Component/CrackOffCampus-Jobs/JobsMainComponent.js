@@ -1,7 +1,6 @@
 import './styles.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React from "react";
-import NavbarComponent from '../Navbar/NavbarComponent';
 import JobsList from './JobsList/JobsList';
 import JobDetailsFloatComponent from './JobDetailsFloatComponent/JobDetailsFloatComponent';
 import JobFilterComponent from './JobFilterComponent/JobFilterComponent';
