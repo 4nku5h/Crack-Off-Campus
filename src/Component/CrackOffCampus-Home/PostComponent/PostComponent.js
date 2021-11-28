@@ -3,7 +3,6 @@ import { useState } from "react";
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchCommunityPostsData } from './../../../redux/actions/actions'
 import PostCardComponent from "./PostCardComponent";
-import { ArrowClockwise } from "react-bootstrap-icons";
 function PostComponent() {
     const dispatch = useDispatch();
     useEffect(() => {
@@ -24,7 +23,7 @@ function PostComponent() {
                 setVisible(visible + 2);
                 ref_loading.current.classList.remove('active')
                 isLoading = true;
-            }, 500)
+            }, 1000)
 
             ref_loading.current.classList.add('active')
         }
@@ -37,8 +36,7 @@ function PostComponent() {
 
     return (
         <div className="PostComponent_COMMUNITY_POSTS" onScroll={showMorePosts}>
-            {console.log(community_posts.total_posts)}
-            {community_posts.data.slice(0, visible).map((post) => <PostCardComponent {...post} />)}
+            {community_posts.data.slice(0, visible).map((post) => <PostCardComponent {...post} key={Math.random(100000)} />)}
             <div className="PostComponent_Loading" ref={ref_loading}></div>
         </div>
     )

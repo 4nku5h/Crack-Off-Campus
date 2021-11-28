@@ -12,18 +12,29 @@ import { useDispatch, useSelector } from "react-redux";
 function App() {
     const isAccessWithoutLogin = useSelector(state => state.isAccessWithoutLogin);
     const isLoggedin = useSelector(state => state.isLoggedin)
-
+    const key_MainVisibility="MAIN_ACCESSIBLE";
+    
+    function saveToLocelStorage(key){
+        localStorage.setItem(key,true);
+    } 
+    function isPreviouslyLoggedIn(key){
+        if(window.localStorage.getItem(key)){
+            return window.localStorage.getItem(key)
+        }else return false;
+    }
     return (
         <div className="App" > {
-            (isAccessWithoutLogin == false && isLoggedin == false) ? (
+            (isAccessWithoutLogin == false && isLoggedin == false && isPreviouslyLoggedIn(key_MainVisibility)==false) ? (
                 <LoadingComponent />
             ) :
                 (
-                    <MainComponent />
-                    
+                    <>
+                       {saveToLocelStorage(key_MainVisibility)}
+                        <MainComponent />
+                    </>
+
                 )
         }
-        {console.log(App.displayName)}
         </div>
     )
 

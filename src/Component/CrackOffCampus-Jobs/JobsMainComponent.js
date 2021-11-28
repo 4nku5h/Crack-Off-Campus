@@ -13,7 +13,7 @@ import { fetchJobsData } from "../../redux/actions/actions";
 function JobsMainComponent() {
   const dispatch = useDispatch();
   dispatch(fetchJobsData())
-
+  
   return (
     <div className="JobsComponent">
       {/* Change Below Component for different route*/}
