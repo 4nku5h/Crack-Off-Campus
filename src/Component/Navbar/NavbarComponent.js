@@ -31,6 +31,10 @@ function NavbarComponent(props) {
                 ref_Home.current.classList.remove('active');
                 break;
             }
+            case "/CRACK-OFF-CAMPUS": {
+                ref_Home.current.classList.remove('active');
+                break;
+            }
             case "/JOBS": {
                 ref_JOBS.current.classList.remove('active');
                 break;
@@ -62,6 +66,10 @@ function NavbarComponent(props) {
                 ref_Home.current.classList.add('active');
                 break;
             }
+            case "/CRACK-OFF-CAMPUS": {
+                ref_Home.current.classList.add('active');
+                break;
+            }
             case "/JOBS": {
                 ref_JOBS.current.classList.add('active');
                 break;
@@ -89,9 +97,6 @@ function NavbarComponent(props) {
         }
         dispatch(setCurrentSelectdComponent(name));
     }
-    useEffect(()=>{
-        handleComponent("/")
-    },[])
     useEffect(() => {
         handleComponent(location.pathname.toUpperCase())
     }, [location])
