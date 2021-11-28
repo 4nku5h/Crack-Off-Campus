@@ -1,6 +1,6 @@
 .HomeComponent {
     background-color: var(--BackgroundColor);
-    margin-top: 7vh;
+    margin-top: 9vh;
     height: 85%;
 }
 
@@ -45,10 +45,11 @@
     width: 70%;
     text-align: left;
     padding: 30px;
-    margin: 30px;
+    margin-left: 20px;
+    margin-top: 10px;
 }
 #post_title{
-    font-size: 25px;
+    font-size: 20px;
 }
 .post_user{
     width: fit-content;
@@ -56,16 +57,20 @@
     text-align: right;
     margin-left: auto;
     margin-right: 0px;
+    font-size: 15px;
+    color: rgb(85, 85, 85);
+    margin-top: 10px;
 }
 #post_userProfileImage{
     margin-top: 5px;
     margin-right: 5px;
 }
 #post_userID{
-    font-size: 20px;
+    color: rgb(85, 85, 85);
+    font-size: 19px;
 }
 #post_rating{
-
+    color: rgb(255, 153, 0);
 }
 #post_date{
   font-size: 12px;
@@ -73,11 +78,15 @@
   margin-right: 0;
   padding: 5px;
   width: fit-content;
-  background-color: rgb(218, 218, 218);
-  border-radius: 20px;
-  color: rgb(0, 0, 0);
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  background-color: rgb(65, 65, 65);
+  color: rgb(255, 255, 255);
 }
 #post_data{
-
-    font-size: 18px;
+    font-size: 15px;
+}
+.POST_CARD_COMPONENT_userName_userrating{
+    margin-left: auto;
+    width: fit-content;
 }
