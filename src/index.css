@@ -1,7 +1,7 @@
 :root {
-    --BackgroundColor: rgb(243, 243, 243);
+    --BackgroundColor: rgb(236, 233, 233);
     --BackgroundColorTransparent: rgba(255, 255, 255, 0);
-    --BorderCard:#E0DFDC;
+    --BorderCard:#d4d4d4;
     --FontColorDarkGray:#3780c9;
     --FontColorLightGray:#3d3d3d;
 }

@@ -2,6 +2,7 @@
     margin-top: 9vh;
     height: 90vh;
     overflow-y: scroll;
+    background-color: var(--BackgroundColor);
 }
 
 .CourseCardComponent{

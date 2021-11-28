@@ -9,8 +9,8 @@
     background-color: #ffffff;
     width: 100vw;
     height: 9vh;
-    padding: 7px;
-    border: 1px solid var(--BorderCard);
+    padding-top: 7px;
+    border: 1px solid rgb(214, 214, 214);
 }
 
 #navbar_COC{
@@ -19,6 +19,7 @@
     margin-top: auto;
     margin-bottom: auto;
     margin-right: 50px;
+    margin-left: 15px;
 }
 .Nav_ITEM_DIV{
     margin-left: 9px;
@@ -30,20 +31,18 @@
     margin-Right: "7px";
     color: rgb(136, 136, 136);
 }
-.navbar_icon.active{
-    color: rgb(3, 3, 3);
-}
 
-#NAV_ITEM_TEXT{
-    color: black;
+.NAV_ITEM_TEXT{
+    color: rgb(136, 136, 136);
     font-weight: 450;
     font-size: 15px;
+    transition:  all 0.5s;
 }
 .NAV_ITEM_UNDERLINE{
     background-color: black;
     margin: 0 auto;
     transition: all 0.7s;
-    width: 0%;
+    width: 100%;
     height: 2px;
     opacity: 0;
 }
@@ -52,7 +51,15 @@
     opacity: 1;
 }
 
-#React_Router_Link{
+.React_Router_Link{
     z-index: 3;
     text-decoration: none;
+    transition: all 0.5s;
+}
+.React_Router_Link.active *{
+    font-weight: 500;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding: 2px;
+    color: black;
 }

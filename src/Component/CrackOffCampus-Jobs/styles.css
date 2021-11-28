@@ -1,6 +1,6 @@
 .JobsComponent{
   margin-top: 10vh;
-    height: 90vh;
+  height: 90vh;
 }
 /* Job Card Component start++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 .Card{
@@ -83,6 +83,8 @@
 /* Job Details Float Component  START ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 .JobDetailsFloat{
   margin-top: 9px;
+  margin-bottom: 9px;
+  margin-left: 9px;
   padding: 15px;
   width: 20vw;
   background-color: #ffffff;
@@ -111,6 +113,8 @@
 /* Job Filter  Component  START++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 .JobFilterFloat{
   margin-top: 9px;
+  margin-bottom: 9px;
+  margin-right: 9px;
   padding: 15px;
   width: 25vw;
   background-color: #ffffff;

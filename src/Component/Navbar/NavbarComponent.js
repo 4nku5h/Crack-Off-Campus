@@ -15,102 +15,83 @@ function NavbarComponent(props) {
     const location = useLocation();
     const [currentRoute,setCurrentRoute]=useState("/");
 
-    const icon_Home = useRef(null);
-    const icon_JOBS = useRef(null);
-    const icon_COURSES = useRef(null);
-    const icon_SEEWE = useRef(null);
-    const icon_HIRE = useRef(null);
-    const icon_PLACEMENT = useRef(null);
-    const icon_IDE = useRef(null);
-    const underline_Home = useRef(null);
-    const underline_JOBS = useRef(null);
-    const underline_COURSES = useRef(null);
-    const underline_SEEWE = useRef(null);
-    const underline_HIRE = useRef(null);
-    const underline_PLACEMENT = useRef(null);
-    const underline_IDE = useRef(null);
- 
+    const ref_Home = useRef(null);
+    const ref_JOBS = useRef(null);
+    const ref_COURSES = useRef(null);
+    const ref_SEEWE = useRef(null);
+    const ref_HIRE = useRef(null);
+    const ref_PLACEMENT = useRef(null);
+    const ref_IDE = useRef(null);
 
     function handleComponent(name) {
         let oldRoute=currentRoute;
         setCurrentRoute(name)
         switch (oldRoute) {
             case "/": {
-                icon_Home.current.classList.remove('active');
-                underline_Home.current.classList.remove('active');
+                ref_Home.current.classList.remove('active');
                 break;
             }
             case "/JOBS": {
-                icon_JOBS.current.classList.remove('active');
-                underline_JOBS.current.classList.remove('active');
+                ref_JOBS.current.classList.remove('active');
                 break;
             }
             case "/COURSES": {
-                icon_COURSES.current.classList.remove('active');
-                underline_COURSES.current.classList.remove('active');
+                ref_COURSES.current.classList.remove('active');
                 break;
             }
             case "/SEEWE": {
-                icon_SEEWE.current.classList.remove('active');
-                underline_SEEWE.current.classList.remove('active');
+                ref_SEEWE.current.classList.remove('active');
                 break;
             }
             case "/HIRE": {
-                icon_HIRE.current.classList.remove('active');
-                underline_HIRE.current.classList.remove('active');
+                ref_HIRE.current.classList.remove('active');
                 break;
             }
             case "/PLACEMENT": {
-                icon_PLACEMENT.current.classList.remove('active');
-                underline_PLACEMENT.current.classList.remove('active');
+                ref_PLACEMENT.current.classList.remove('active');
                 break;
             }
-            case "/IDE": {
-                icon_IDE.current.classList.remove('active');
-                underline_IDE.current.classList.remove('active');
+            case "/COMPILER": {
+                ref_IDE.current.classList.remove('active');
                 break;
             }
         }
 
         switch (name) {
             case "/": {
-                icon_Home.current.classList.add('active');
-                underline_Home.current.classList.add('active');
+                ref_Home.current.classList.add('active');
                 break;
             }
             case "/JOBS": {
-                icon_JOBS.current.classList.add('active');
-                underline_JOBS.current.classList.add('active');
+                ref_JOBS.current.classList.add('active');
                 break;
             }
             case "/COURSES": {
-                icon_COURSES.current.classList.add('active');
-                underline_COURSES.current.classList.add('active');
+                ref_COURSES.current.classList.add('active');
                 break;
             }
             case "/SEEWE": {
-                icon_SEEWE.current.classList.add('active');
-                underline_SEEWE.current.classList.add('active');
+                ref_SEEWE.current.classList.add('active');
                 break;
             }
             case "/HIRE": {
-                icon_HIRE.current.classList.add('active');
-                underline_HIRE.current.classList.add('active');
+                ref_HIRE.current.classList.add('active');
                 break;
             }
             case "/PLACEMENT": {
-                icon_PLACEMENT.current.classList.add('active');
-                underline_PLACEMENT.current.classList.add('active');
+                ref_PLACEMENT.current.classList.add('active');
                 break;
             }
             case "/COMPILER": {
-                icon_IDE.current.classList.add('active');
-                underline_IDE.current.classList.add('active');
+                ref_IDE.current.classList.add('active');
                 break;
             }
         }
         dispatch(setCurrentSelectdComponent(name));
     }
+    useEffect(()=>{
+        handleComponent("/")
+    },[])
     useEffect(() => {
         handleComponent(location.pathname.toUpperCase())
     }, [location])
@@ -118,61 +99,61 @@ function NavbarComponent(props) {
     return (
         <div className="Navbar">
             <h3 id="navbar_COC" href="#">Crack Off Campus</h3>
-            <Link to="/" id="React_Router_Link" >
+            <Link to="/" className="React_Router_Link" ref={ref_Home}>
                 <div className="Nav_ITEM_DIV" >
-                    <HouseFill className="navbar_icon" ref={icon_Home} />
-                    <h5 id="NAV_ITEM_TEXT">Home</h5>
+                    <HouseFill className="navbar_icon"  />
+                    <h5 className="NAV_ITEM_TEXT">Home</h5>
                 </div>
-                <div className="NAV_ITEM_UNDERLINE" ref={underline_Home}></div>
+                <div className="NAV_ITEM_UNDERLINE"></div>
 
             </Link>
 
-            <Link to="/jobs" id="React_Router_Link">
-                <div className="Nav_ITEM_DIV">
-                    <BriefcaseFill className="navbar_icon" ref={icon_JOBS} />
-                    <h5 id="NAV_ITEM_TEXT">Jobs</h5>
+            <Link to="/jobs" className="React_Router_Link" ref={ref_JOBS}>
+                <div className="Nav_ITEM_DIV" >
+                    <BriefcaseFill className="navbar_icon" />
+                    <h5 className="NAV_ITEM_TEXT">Jobs</h5>
                 </div>
-                <div className="NAV_ITEM_UNDERLINE" ref={underline_JOBS}></div>
+                <div className="NAV_ITEM_UNDERLINE"></div>
             </Link>
 
-            <Link to="/courses"  id="React_Router_Link" >
+            <Link to="/courses"  className="React_Router_Link" ref={ref_COURSES} >
                 <div className="Nav_ITEM_DIV">
-                    <BookHalf className="navbar_icon" ref={icon_COURSES} />
-                    <h5 id="NAV_ITEM_TEXT">Courses</h5>
+                    <BookHalf className="navbar_icon" />
+                    <h5 className="NAV_ITEM_TEXT">Courses</h5>
                 </div>
-                <div className="NAV_ITEM_UNDERLINE" ref={underline_COURSES}></div>
+                <div className="NAV_ITEM_UNDERLINE"></div>
             </Link>
 
-            <Link to="/seewe" id="React_Router_Link" >
+            <Link to="/seewe" className="React_Router_Link" ref={ref_SEEWE} >
                 <div className="Nav_ITEM_DIV">
-                    <CreditCard2FrontFill className="navbar_icon" ref={icon_SEEWE} />
-                    <h5 id="NAV_ITEM_TEXT">Seewe</h5>
+                    <CreditCard2FrontFill className="navbar_icon" />
+                    <h5 className="NAV_ITEM_TEXT">Seewe</h5>
                 </div>
-                <div className="NAV_ITEM_UNDERLINE" ref={underline_SEEWE}></div>
+                <div className="NAV_ITEM_UNDERLINE"></div>
             </Link>
 
-            <Link to="/hire" id="React_Router_Link" >
+            <Link to="/hire" className="React_Router_Link" ref={ref_HIRE}>
                 <div className="Nav_ITEM_DIV">
-                    <FolderSymlinkFill className="navbar_icon" ref={icon_HIRE} />
-                    <h5 id="NAV_ITEM_TEXT">Hire</h5>
+                    <FolderSymlinkFill className="navbar_icon"/>
+                    <h5 className="NAV_ITEM_TEXT">Hire</h5>
                 </div>
-                <div className="NAV_ITEM_UNDERLINE" ref={underline_HIRE}></div>
+                <div className="NAV_ITEM_UNDERLINE"></div>
             </Link>
 
-            <Link to="/placement" id="React_Router_Link" >
+            <Link to="/placement" className="React_Router_Link" ref={ref_PLACEMENT}>
                 <div className="Nav_ITEM_DIV">
-                    <TvFill className="navbar_icon" ref={icon_PLACEMENT} />
-                    <h5 id="NAV_ITEM_TEXT">Placement</h5>
+                    <TvFill className="navbar_icon" />
+                    <h5 className="NAV_ITEM_TEXT">Placement</h5>
                 </div>
-                <div className="NAV_ITEM_UNDERLINE" ref={underline_PLACEMENT}></div>
+                <div className="NAV_ITEM_UNDERLINE"></div>
             </Link>
 
-            <Link to="/compiler" id="React_Router_Link">
+            <Link to="/compiler" className="React_Router_Link" ref={ref_IDE} >
                 <div className="Nav_ITEM_DIV">
-                    <TerminalFill className="navbar_icon" ref={icon_IDE} />
-                    <h5 id="NAV_ITEM_TEXT">IDE</h5>
+                    <TerminalFill className="navbar_icon"/>
+                    <h5 className="NAV_ITEM_TEXT">IDE</h5>
                 </div>
-                <div className="NAV_ITEM_UNDERLINE" ref={underline_IDE}></div>
+                <div className="NAV_ITEM_UNDERLINE"></div>
             </Link>
 
 
