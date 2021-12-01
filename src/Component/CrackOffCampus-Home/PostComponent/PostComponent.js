@@ -23,7 +23,7 @@ function PostComponent() {
                 setVisible(visible + 2);
                 ref_loading.current.classList.remove('active')
                 isLoading = true;
-            }, 500)
+            }, 300)
 
             ref_loading.current.classList.add('active')
         }
@@ -36,7 +36,7 @@ function PostComponent() {
 
     return (
         <div className="PostComponent_COMMUNITY_POSTS" onScroll={showMorePosts}>
-            {community_posts.data.slice(0, visible).map((post) => <PostCardComponent {...post} key={Math.random(100000)} />)}
+            {community_posts.data.slice(0, visible).map((post) => <PostCardComponent {...post}  />)}
             <div className="PostComponent_Loading" ref={ref_loading}></div>
         </div>
     )
