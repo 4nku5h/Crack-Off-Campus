@@ -3,17 +3,19 @@ import React, { useEffect, useState } from 'react';
 import { useRef } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { setCurrentSelectdComponent } from '../../redux/actions/actions';
-import { HouseFill, CreditCard2FrontFill, BookHalf, FolderSymlinkFill, BriefcaseFill, TvFill, TerminalFill } from 'react-bootstrap-icons';
+import { List, HouseFill, CreditCard2FrontFill, BookHalf, FolderSymlinkFill, BriefcaseFill, TvFill, TerminalFill } from 'react-bootstrap-icons';
 
 /// Router
 import { Link } from 'react-router-dom';
 import { useLocation } from 'react-router';
+import { is } from 'express/lib/request';
 
 function NavbarComponent(props) {
     const currentSelectdComponent = useSelector(state => state.currentSelectdComponent);
     const dispatch = useDispatch();
     const location = useLocation();
-    const [currentRoute,setCurrentRoute]=useState("/");
+    const [currentRoute, setCurrentRoute] = useState("/");
+    const [isMenuVisible, setMenuVisible] = useState(false);
 
     const ref_Home = useRef(null);
     const ref_JOBS = useRef(null);
@@ -23,8 +25,12 @@ function NavbarComponent(props) {
     const ref_PLACEMENT = useRef(null);
     const ref_IDE = useRef(null);
 
+    const ref_Menu = useRef(null);
+
+    const ref_Navbar_Collapse = useRef(null);
+
     function handleComponent(name) {
-        let oldRoute=currentRoute;
+        let oldRoute = currentRoute;
         setCurrentRoute(name)
         switch (oldRoute) {
             case "/": {
@@ -97,71 +103,90 @@ function NavbarComponent(props) {
         }
         dispatch(setCurrentSelectdComponent(name));
     }
+    function attachMenuEvent(){
+        ref_Menu.current.addEventListener('click', () => {
+            setMenuVisible((pre)=>{
+                if(pre==true){
+                    ref_Navbar_Collapse.current.classList.add('active')
+                    return false;
+                }
+                 else{
+                    ref_Navbar_Collapse.current.classList.remove('active')
+                    return true;
+                 }
+            })
+        })
+    }
+
+    useEffect(()=>{
+        //Component did mount
+        attachMenuEvent()
+    },[])
+
     useEffect(() => {
         handleComponent(location.pathname.toUpperCase())
     }, [location])
 
     return (
         <div className="Navbar">
-            <h3 id="navbar_COC" href="#">Crack Off Campus</h3>
-            <Link to="/" className="React_Router_Link" ref={ref_Home}>
-                <div className="Nav_ITEM_DIV" >
-                    <HouseFill className="navbar_icon"  />
-                    <h5 className="NAV_ITEM_TEXT">Home</h5>
-                </div>
-                <div className="NAV_ITEM_UNDERLINE"></div>
 
-            </Link>
+            <div className="NavBar_Title">
+                <List className="NavBar_Menu" ref={ref_Menu} />
+                <h3 id="navbar_COC" href="#">Crack Off Campus</h3>
+            </div>
 
-            <Link to="/jobs" className="React_Router_Link" ref={ref_JOBS}>
-                <div className="Nav_ITEM_DIV" >
-                    <BriefcaseFill className="navbar_icon" />
-                    <h5 className="NAV_ITEM_TEXT">Jobs</h5>
-                </div>
-                <div className="NAV_ITEM_UNDERLINE"></div>
-            </Link>
+            <div className="NavBar_Collapse" ref={ref_Navbar_Collapse}>
+                <Link to="/" className="React_Router_Link" ref={ref_Home}>
+                    <div className="Nav_ITEM_DIV" >
+                        <HouseFill className="navbar_icon" />
+                        <h5 className="NAV_ITEM_TEXT">Home</h5>
+                    </div>
 
-            <Link to="/courses"  className="React_Router_Link" ref={ref_COURSES} >
-                <div className="Nav_ITEM_DIV">
-                    <BookHalf className="navbar_icon" />
-                    <h5 className="NAV_ITEM_TEXT">Courses</h5>
-                </div>
-                <div className="NAV_ITEM_UNDERLINE"></div>
-            </Link>
+                </Link>
 
-            <Link to="/seewe" className="React_Router_Link" ref={ref_SEEWE} >
-                <div className="Nav_ITEM_DIV">
-                    <CreditCard2FrontFill className="navbar_icon" />
-                    <h5 className="NAV_ITEM_TEXT">Seewe</h5>
-                </div>
-                <div className="NAV_ITEM_UNDERLINE"></div>
-            </Link>
+                <Link to="/jobs" className="React_Router_Link" ref={ref_JOBS}>
+                    <div className="Nav_ITEM_DIV" >
+                        <BriefcaseFill className="navbar_icon" />
+                        <h5 className="NAV_ITEM_TEXT">Jobs</h5>
+                    </div>
+                </Link>
 
-            <Link to="/hire" className="React_Router_Link" ref={ref_HIRE}>
-                <div className="Nav_ITEM_DIV">
-                    <FolderSymlinkFill className="navbar_icon"/>
-                    <h5 className="NAV_ITEM_TEXT">Hire</h5>
-                </div>
-                <div className="NAV_ITEM_UNDERLINE"></div>
-            </Link>
+                <Link to="/courses" className="React_Router_Link" ref={ref_COURSES} >
+                    <div className="Nav_ITEM_DIV">
+                        <BookHalf className="navbar_icon" />
+                        <h5 className="NAV_ITEM_TEXT">Courses</h5>
+                    </div>
+                </Link>
 
-            <Link to="/placement" className="React_Router_Link" ref={ref_PLACEMENT}>
-                <div className="Nav_ITEM_DIV">
-                    <TvFill className="navbar_icon" />
-                    <h5 className="NAV_ITEM_TEXT">Placement</h5>
-                </div>
-                <div className="NAV_ITEM_UNDERLINE"></div>
-            </Link>
+                <Link to="/seewe" className="React_Router_Link" ref={ref_SEEWE} >
+                    <div className="Nav_ITEM_DIV">
+                        <CreditCard2FrontFill className="navbar_icon" />
+                        <h5 className="NAV_ITEM_TEXT">Seewe</h5>
+                    </div>
+                </Link>
 
-            <Link to="/compiler" className="React_Router_Link" ref={ref_IDE} >
-                <div className="Nav_ITEM_DIV">
-                    <TerminalFill className="navbar_icon"/>
-                    <h5 className="NAV_ITEM_TEXT">IDE</h5>
-                </div>
-                <div className="NAV_ITEM_UNDERLINE"></div>
-            </Link>
+                <Link to="/hire" className="React_Router_Link" ref={ref_HIRE}>
+                    <div className="Nav_ITEM_DIV">
+                        <FolderSymlinkFill className="navbar_icon" />
+                        <h5 className="NAV_ITEM_TEXT">Hire</h5>
+                    </div>
+                </Link>
 
+                <Link to="/placement" className="React_Router_Link" ref={ref_PLACEMENT}>
+                    <div className="Nav_ITEM_DIV">
+                        <TvFill className="navbar_icon" />
+                        <h5 className="NAV_ITEM_TEXT">Placement</h5>
+                    </div>
+                </Link>
 
+                <Link to="/compiler" className="React_Router_Link" ref={ref_IDE} >
+                    <div className="Nav_ITEM_DIV">
+                        <TerminalFill className="navbar_icon" />
+                        <h5 className="NAV_ITEM_TEXT">IDE</h5>
+                    </div>
+                </Link>
+
+            </div>
         </div>
     )
 }
