@@ -1,7 +1,7 @@
 .Navbar {
     display: flex;
     flex-direction: row;
-    z-index: 1;
+    z-index: 4;
     background-color: #ffffff;
     width: 100vw;
     padding-top: 7px;
@@ -66,12 +66,21 @@
 @media  (max-width:948px){
     .Navbar {
         flex-direction: column;
-       
+        background-color: #0e76a8 ;
+        
+    }
+    .Navbar *{
+        color: white;
     }
     .navbar_icon{
         display: none;
     }
-
+    .React_Router_Link.active *{
+        color: rgb(255, 255, 255);
+    }
+    #navbar_COC{
+        color: rgb(255, 255, 255);
+    }
     .Nav_ITEM_DIV{
         flex-direction: row;
         justify-content: flex-start;
