@@ -23,7 +23,7 @@ function PostComponent() {
                 setVisible(visible + 2);
                 //ref_loading.current.classList.remove('active')
                 isLoading = true;
-            }, 1000)
+            }, 500)
 
             //ref_loading.current.classList.add('active')
         }
