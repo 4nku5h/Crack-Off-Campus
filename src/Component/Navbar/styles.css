@@ -4,7 +4,7 @@
     z-index: 4;
     background-color: #ffffff;
     width: 100vw;
-    padding-top: 7px;
+    padding: 7px;
 }
 .NavBar_Title{
     display: flex;
@@ -15,12 +15,15 @@
 }
 .NavBar_Menu{
     display: none;
-    font-size: 20px;
+    font-size: 25px;
     margin: 5px;
 }
 #navbar_COC{
     font-weight: 600;
     font-size: 20px;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 10px;
     color: rgb(43, 43, 43);
 }
 .Nav_ITEM_DIV{
@@ -42,6 +45,7 @@
     color: rgb(136, 136, 136);
     font-weight: 450;
     font-size: 15px;
+    margin-bottom: 0px;
     transition:  all 0.5s;
 }
 
@@ -51,10 +55,6 @@
     transition: all 0.5s;
 }
 .React_Router_Link.active *{
-    font-weight: 500;
-    margin-left: 5px;
-    margin-right: 5px;
-    padding: 2px;
     color: rgb(43, 43, 43);
 }
 .NavBar_Collapse{
@@ -66,6 +66,7 @@
     .Navbar {
         flex-direction: column;
         background-color: #0e76a8 ;
+        padding: 1px;
         
     }
     .Navbar *{
@@ -81,18 +82,21 @@
         color: rgb(255, 255, 255);
     }
     .Nav_ITEM_DIV{
+        margin: 10px;
         flex-direction: row;
         justify-content: flex-start;
     }
+    .Nav_ITEM_DIV:active{
+        font-weight: 700s;
+    }
     .NavBar_Menu{
         display:flex;
-        font-size: 20px;
-        margin: 5px;
     }
     .NavBar_Collapse{
         padding: 5px;
         display: none;
         flex-direction: column;
+        align-items: center;
     }
     .NavBar_Collapse.active{
         display: flex;

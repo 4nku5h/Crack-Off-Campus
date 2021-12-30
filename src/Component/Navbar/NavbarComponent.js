@@ -30,6 +30,7 @@ function NavbarComponent(props) {
     const ref_Navbar_Collapse = useRef(null);
 
     function handleComponent(name) {
+        toggleMenu(false)
         let oldRoute = currentRoute;
         setCurrentRoute(name)
         switch (oldRoute) {
@@ -107,15 +108,23 @@ function NavbarComponent(props) {
         ref_Menu.current.addEventListener('click', () => {
             setMenuVisible((pre)=>{
                 if(pre==true){
-                    ref_Navbar_Collapse.current.classList.add('active')
+                    toggleMenu(true)
                     return false;
                 }
                  else{
-                    ref_Navbar_Collapse.current.classList.remove('active')
+                    toggleMenu(false)
                     return true;
                  }
             })
         })
+    }
+    function toggleMenu(val){
+        if(val==true){
+            ref_Navbar_Collapse.current.classList.add('active')
+        }
+         else{
+            ref_Navbar_Collapse.current.classList.remove('active')
+         }
     }
 
     useEffect(()=>{
