@@ -4,30 +4,29 @@ import React from "react";
 import JobsList from './JobsList/JobsList';
 import JobDetailsFloatComponent from './JobDetailsFloatComponent/JobDetailsFloatComponent';
 import JobFilterComponent from './JobFilterComponent/JobFilterComponent';
-
-//Api
+import image_career from "./../../assets/career_progress_ivdb.svg";
+//Redux
 import { useDispatch } from 'react-redux';
 import { fetchJobsData } from "../../redux/actions/actions";
+
 
 
 function JobsMainComponent() {
   const dispatch = useDispatch();
   dispatch(fetchJobsData())
-  
+
   return (
     <div className="JobsComponent">
-      {/* Change Below Component for different route*/}
-      <div>
+      <div className='JobsComponent_careerImage_div'>
         <JobDetailsFloatComponent />
-        <div className="flexBox_column">
-          <JobsList />
-        </div>
-        <JobFilterComponent />
+        <img src={image_career} className="JobsComponent_careerImage_svg" alt="Loading"></img>
       </div>
+        <JobsList />
+      <JobFilterComponent />
+      
     </div>
   )
 }
 export default JobsMainComponent;
+
 //
-//<UserDetails  {...props.userDetails} />
-//<InformationComponent {...props}/>

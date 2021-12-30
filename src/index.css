@@ -27,9 +27,6 @@ code {
     border-top: 1px solid rgba(187, 187, 187, 0.521);
   }
 
-
-/* //////////////////////////////////////////////////////////////////////////////////////////////////////////*/
-/* //////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 /* //////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 /* //////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 /* Global Flex START ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
@@ -61,72 +58,3 @@ code {
     z-index: 1;
 }
 /* Global Flex END ------------------------------------------------------------------------------------*/
-
-
-Media Responsive Query  START++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
-@media screen and (max-width: 800px) {
-
-    .JobsCardComponent {
-        font-size: 4px;
-        max-width: 60%;
-    }
-    .jobsList {
-        
-        max-width: 100%;
-        margin: 10px;
-    }
-    .JobDetailsFloat{
-        visibility: hidden;
-    }
-    .JobFilterFloat{
-        max-width: 40%;
-    }
-    .Navbar {
-    }
-    .JobFilterFloat{
-        width: 35vw;
-    }
-}
-@media screen and (max-width: 700px) {
-    .JobsCardComponent {
-        font-size: 3.2px;
-        max-width: 62%;
-    }
-    .jobsList {
-        max-width: 100%;
-        margin: 10px;
-    }
-    .JobDetailsFloat{
-        visibility: hidden;
-    }
-    .JobFilterFloat{
-        width: 32vw;
-    }
-    .LoginSignUp_divider_second{   
-        visibility: hidden;
-    }
-}
-@media screen and (max-width: 600px) {
-    .JobsCardComponent {
-        font-size: 3px;
-        max-width: 100%;
-    }
-    .jobsList {
-        
-        max-width: 100%;
-        margin: 10px;
-    }
-    .JobDetailsFloat{
-        visibility: hidden;
-    }
-    .JobFilterFloat{
-        visibility: hidden;
-    }
-    .Navbar {
-    }
-}
-@media screen and (max-width: 500px) {
-    .Navbar {
-    }
-}
-/* Media Responsive Query  END ------------------------------------------------------------------------------------*/

@@ -1,18 +1,38 @@
+:root {
+  --BackgroundBorder:#b1b1b1;
+}
 .JobsComponent{
-  height: 90vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: lavender;
+  padding: 10px;
+}
+.JobsComponent_careerImage_div{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 21%;
+}
+.JobsComponent_btn_filter{
+   display: none;
+   font-size: 50px;
+   position:fixed;
+   right: 15px;
+   bottom: 15px;
+   border-radius: 50px;
+   color: rgb(28, 146, 214);
 }
 /* Job Card Component start++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 .Card{
-    width: '100%';
 }
+
 
 .JobsCardComponent {
   border-radius: 10px;
   background-color: #ffffff;
   margin-bottom: 7px;
-  font-size: 3.5px;
-  max-width:45vw;
-  border: 1px solid var(--BorderCard);
+  border: 1px solid var(--BackgroundBorder);
 }
 .JobsCardComponent_divider {
   width: 100%;
@@ -21,48 +41,60 @@
   display: flex;
 }
 .JobsCardComponent_divider_first{
-  font-size: 1em;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 20px;
+  margin: 5px;
   width: 30%;
+  height:100%;
 }
 .JobsCardComponent_divider_second{
   width: 80%;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
 }
-.job_apply_Button{
-  display: flex;
-  color: #0C67C2;
-  font-size: 5em;
-  font-style:bold;
-  align-items: flex-start;
+.JobsCardComponent_company_image{
+  width: 35%;
+  border-radius: 10px;
+  margin-left: 0 ;
 }
 
 .jobsList {
   flex: 1;
-  max-width: 50%;
   overflow-y: scroll;
   height: 90vh;
+}
+.jobsList *{
+  font-size: 15px;
 }
 ::-webkit-scrollbar { 
   display: none;
 }
 .job_postedDate{
-  align-items: flex-start;
   color: #087844;
-  font-size: 4em;
   font-weight: 700;
 }
 .cardTitle{
   margin-top: 8%;
-  font-size: 3em;
 }
+.job_apply_Button{
+  display: flex;
+  color: #0C67C2;
+  font-style:bold;
+  align-items: flex-start;
+  font-size: 18px;
+}
+
 .job_apply_Button:hover {
   text-decoration: underline;
 
 }
 .list-group-flush{
+  padding: 3px;
   max-height: 3px;
-  font-size: 4em;
   color:#817f7f ;
   color: var(--FontColorLightGray);
 }
@@ -73,66 +105,47 @@
 }
 /* Job Card Component  END ------------------------------------------------------------------------------------*/
 
-
-
-/* //////////////////////////////////////////////////////////////////////////////////////////////////////////*/
-/* //////////////////////////////////////////////////////////////////////////////////////////////////////////*/
-/* //////////////////////////////////////////////////////////////////////////////////////////////////////////*/
-/* //////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 /* Job Details Float Component  START ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 .JobDetailsFloat{
-  margin-top: 9px;
-  margin-bottom: 9px;
-  margin-left: 9px;
+  z-index: 1;
   padding: 15px;
   width: 20vw;
-  background-color: #ffffff;
+  background-color: #ffffffdc;
   border-radius: 10px;
-  position: fixed;
-  font-size: 5px;
-  top: 9vh;
   border: 1px solid var(--BorderCard);
+  height: 50%;
+}
+.JobDetailsFloat *{
+  font-size: 15px;
 }
 #JobFloat_Title{
-  font-size: 3.7em;
   font-weight: bold;
   color: var(--FontColorDarkGray);
 
 }
 #JobFloat_items{
-  font-size: 3em;
 }
 /* Job Details Float Component  END ------------------------------------------------------------------------------------*/
-/* //////////////////////////////////////////////////////////////////////////////////////////////////////////*/
-/* //////////////////////////////////////////////////////////////////////////////////////////////////////////*/
-/* //////////////////////////////////////////////////////////////////////////////////////////////////////////*/
-/* //////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 
 
 /* Job Filter  Component  START++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 .JobFilterFloat{
-  margin-top: 9px;
-  margin-bottom: 9px;
-  margin-right: 9px;
   padding: 15px;
   width: 25vw;
   background-color: #ffffff;
   border-radius: 10px;
-  position: fixed;
-  right: 0;
-  top: 9vh;
-  bottom: 0vh;
-  font-size: 0.7em;
   border: 1px solid var(--BorderCard);
+  margin-left: 9px;
 
 }
+.JobFilterFloat *{
+  font-size: 15px;
+}
 #JobFilter_Title{
-  font-size: 2em;
   font-weight: bold;
   color: var(--FontColorDarkGray);
 }
 #JobFilter_items{
-  font-size: 1.2em;
   color: var(--FontColorLightGray);
 }
 .JobFilter_divider_column{
@@ -147,16 +160,13 @@
 #JobFilter_Type{
   display: flex;
   align-items: flex-start;
-  font-size: 1.7em;
   margin-left: 5px;
   color: var(--FontColorDarkGray);
   font-weight: 600;
 }
 /* Job Filter  Component  END++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
-/* //////////////////////////////////////////////////////////////////////////////////////////////////////////*/
-/* //////////////////////////////////////////////////////////////////////////////////////////////////////////*/
-/* //////////////////////////////////////////////////////////////////////////////////////////////////////////*/
-/* //////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+
 
 /* Information Component  START++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 .Information {
@@ -167,3 +177,31 @@
   z-index: 1;
 }
 /* Information Component  END ------------------------------------------------------------------------------------*/
+@media(max-width:948px) {
+  .JobsCardComponent{
+  }
+  .JobDetailsFloat{
+  }
+  .JobsComponent_careerImage_div{
+    display: none;
+  }
+  .JobFilterFloat{
+    flex: 0.5;
+  }
+}
+@media(max-width:700px) {
+  .JobFilterFloat{
+    display: none;
+  }
+  .JobFilterFloat.active{
+    display: flex;
+    flex: 9;
+  }
+  
+
+  
+  .JobsComponent_btn_filter{
+    display: block;
+  }
+}
+
