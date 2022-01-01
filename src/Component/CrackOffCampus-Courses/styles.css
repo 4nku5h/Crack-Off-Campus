@@ -3,25 +3,21 @@
     overflow-y: scroll;
     background-color: var(--BackgroundColor);
 }
-.Courses_Row{
-  display: flex;
-  flex-wrap: wrap;
-}
+
 .CourseCardComponent{
     padding: 20px;
-    padding-bottom: 40px;
     height: auto;
 }
 
 .CourseCardComponent_inner{
     margin: 10px;
-    height: 120%;
+    height: auto;
     transition: all 0.5s;
     backdrop-filter: blur(0px);
 }
 
 .CourseCardComponent_inner:hover{
-    height: 130%;
+    transform: scale(1.1);
 }
 
 #CourseCardComponent_image{
@@ -362,4 +358,14 @@ p{
   #checkbox_showResult{
     font-size: 12px;
   }
-  
+  @media (max-width:948px) {
+    .CourseCardComponent{
+      padding: 25px;
+  }
+  .CourseCardComponent_inner:hover{
+    transform: scale(1.05);
+   }
+   .CourseCardComponent_inner{
+    height: 120%;  
+   }
+  }

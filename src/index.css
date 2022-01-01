@@ -4,7 +4,13 @@
     --BorderCard:#d4d4d4;
     --FontColorDarkGray:#3780c9;
     --FontColorLightGray:#3d3d3d;
+    
+    --Background_ThemeColor--:#0073b1;
+    --Background_Navbar--:#0073b1;
+    --Background_Navbar_text--:#ffffff;
+    --Background_Navbar_text_dark--:#96bbca;
 }
+
 
 html {
     background-color: var(--BackgroundColor);

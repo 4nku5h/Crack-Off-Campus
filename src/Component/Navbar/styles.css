@@ -1,8 +1,4 @@
-:root{
-    --Background_Navbar--:#0e76a8;
-    --Background_Navbar_text--:#ffffff;
-    --Background_Navbar_text_dark--:#b1aeae;
-}
+
 .Navbar {
     display: flex;
     flex-direction: row;

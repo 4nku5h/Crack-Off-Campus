@@ -20,11 +20,11 @@
 }
 .JobsComponent_filter_div{
    display: none;
-   font-size: 50px;
+   font-size: 45px;
    position: fixed;
-   right: 15px;
-   bottom: 15px;
-   color: rgb(28, 146, 214);
+   right: 29px;
+   bottom: 22px;
+   color: var(--Background_ThemeColor--);
    z-index: 10;
 }
 .JobsComponent_filter_btn{
