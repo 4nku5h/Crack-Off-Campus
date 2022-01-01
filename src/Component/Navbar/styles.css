@@ -67,7 +67,7 @@
 @media  (max-width:948px){
     .Navbar {
         flex-direction: column;
-        background-color: #0e76a8 ;
+        background-color: var(--Background_Navbar--) ;
         padding: 1px;
         
     }
