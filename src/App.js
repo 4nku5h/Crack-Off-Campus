@@ -24,6 +24,7 @@ function App() {
     }
     return (
         <div className="App" > {
+            
             (isAccessWithoutLogin == false && isLoggedin == false && isPreviouslyLoggedIn(key_MainVisibility)==false) ? (
                 <LoadingComponent />
             ) :

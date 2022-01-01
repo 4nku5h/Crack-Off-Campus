@@ -33,7 +33,7 @@ class CoursesMainComponent extends Component {
             <div className="CoursesComponent">
                 {(this.props.isQuizComponentVisible == false) ?
                     (
-                        <Row xs={3}>
+                        <Row className="Courses_Row" xs={1} sm={2} md={2} lg={3} xl={3} xxl={4}>
                             {this.props.coursesDetails.coursesData.map((course) => {
                                 return (
                                     <CourseCardComponent {...course} />

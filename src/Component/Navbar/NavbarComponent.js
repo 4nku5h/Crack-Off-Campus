@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { useRef } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { setCurrentSelectdComponent } from '../../redux/actions/actions';
-import { List, HouseFill, CreditCard2FrontFill, BookHalf, FolderSymlinkFill, BriefcaseFill, TvFill, TerminalFill } from 'react-bootstrap-icons';
+import { List, Mailbox2, CreditCard2FrontFill, BookHalf, FolderSymlinkFill, BriefcaseFill, TvFill, TerminalFill } from 'react-bootstrap-icons';
 
 /// Router
 import { Link } from 'react-router-dom';
@@ -17,7 +17,7 @@ function NavbarComponent(props) {
     const [currentRoute, setCurrentRoute] = useState("/");
     const [isMenuVisible, setMenuVisible] = useState(false);
 
-    const ref_Home = useRef(null);
+    const ref_POST = useRef(null);
     const ref_JOBS = useRef(null);
     const ref_COURSES = useRef(null);
     const ref_SEEWE = useRef(null);
@@ -35,15 +35,15 @@ function NavbarComponent(props) {
         setCurrentRoute(name)
         switch (oldRoute) {
             case "/": {
-                ref_Home.current.classList.remove('active');
+                ref_JOBS.current.classList.remove('active');
                 break;
             }
             case "/CRACK-OFF-CAMPUS": {
-                ref_Home.current.classList.remove('active');
+                ref_JOBS.current.classList.remove('active');
                 break;
             }
-            case "/JOBS": {
-                ref_JOBS.current.classList.remove('active');
+            case "/POST": {
+                ref_POST.current.classList.remove('active');
                 break;
             }
             case "/COURSES": {
@@ -70,15 +70,15 @@ function NavbarComponent(props) {
 
         switch (name) {
             case "/": {
-                ref_Home.current.classList.add('active');
+                ref_JOBS.current.classList.add('active');
                 break;
             }
             case "/CRACK-OFF-CAMPUS": {
-                ref_Home.current.classList.add('active');
+                ref_JOBS.current.classList.add('active');
                 break;
             }
-            case "/JOBS": {
-                ref_JOBS.current.classList.add('active');
+            case "/POST": {
+                ref_POST.current.classList.add('active');
                 break;
             }
             case "/COURSES": {
@@ -104,33 +104,33 @@ function NavbarComponent(props) {
         }
         dispatch(setCurrentSelectdComponent(name));
     }
-    function attachMenuEvent(){
+    function attachMenuEvent() {
         ref_Menu.current.addEventListener('click', () => {
-            setMenuVisible((pre)=>{
-                if(pre==true){
+            setMenuVisible((pre) => {
+                if (pre == true) {
                     toggleMenu(true)
                     return false;
                 }
-                 else{
+                else {
                     toggleMenu(false)
                     return true;
-                 }
+                }
             })
         })
     }
-    function toggleMenu(val){
-        if(val==true){
+    function toggleMenu(val) {
+        if (val == true) {
             ref_Navbar_Collapse.current.classList.add('active')
         }
-         else{
+        else {
             ref_Navbar_Collapse.current.classList.remove('active')
-         }
+        }
     }
 
-    useEffect(()=>{
+    useEffect(() => {
         //Component did mount
         attachMenuEvent()
-    },[])
+    }, [])
 
     useEffect(() => {
         handleComponent(location.pathname.toUpperCase())
@@ -138,28 +138,28 @@ function NavbarComponent(props) {
 
     return (
         <div className="Navbar">
-
             <div className="NavBar_Title">
                 <List className="NavBar_Menu" ref={ref_Menu} />
                 <h3 id="navbar_COC" href="#">Crack Off Campus</h3>
             </div>
 
             <div className="NavBar_Collapse" ref={ref_Navbar_Collapse}>
-                <Link to="/" className="React_Router_Link" ref={ref_Home}>
-                    <div className="Nav_ITEM_DIV" >
-                        <HouseFill className="navbar_icon" />
-                        <h5 className="NAV_ITEM_TEXT">Home</h5>
-                    </div>
+               
 
-                </Link>
-
-                <Link to="/jobs" className="React_Router_Link" ref={ref_JOBS}>
+                <Link to="/" className="React_Router_Link" ref={ref_JOBS}>
                     <div className="Nav_ITEM_DIV" >
                         <BriefcaseFill className="navbar_icon" />
                         <h5 className="NAV_ITEM_TEXT">Jobs</h5>
                     </div>
                 </Link>
 
+                <Link to="/post" className="React_Router_Link" ref={ref_POST}>
+                    <div className="Nav_ITEM_DIV" >
+                        <Mailbox2 className="navbar_icon" />
+                        <h5 className="NAV_ITEM_TEXT">Posts</h5>
+                    </div>
+
+                </Link>
                 <Link to="/courses" className="React_Router_Link" ref={ref_COURSES} >
                     <div className="Nav_ITEM_DIV">
                         <BookHalf className="navbar_icon" />

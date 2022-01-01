@@ -1,8 +1,13 @@
+:root{
+    --Background_Navbar--:#0e76a8;
+    --Background_Navbar_text--:#ffffff;
+    --Background_Navbar_text_dark--:#b1aeae;
+}
 .Navbar {
     display: flex;
     flex-direction: row;
     z-index: 4;
-    background-color: #ffffff;
+    background-color: var(--Background_Navbar--) ;
     width: 100vw;
     padding: 7px;
 }
@@ -24,7 +29,7 @@
     margin-top: auto;
     margin-bottom: auto;
     margin-left: 10px;
-    color: rgb(43, 43, 43);
+    color: var(--Background_Navbar_text--)
 }
 .Nav_ITEM_DIV{
     display: flex;
@@ -38,15 +43,15 @@
     transition: all 0.8s;
     font-size: 25px;
     margin-Right: "7px";
-    color: rgb(136, 136, 136);
+    color: var(--Background_Navbar_text_dark--)
 }
 
 .NAV_ITEM_TEXT{
-    color: rgb(136, 136, 136);
     font-weight: 450;
     font-size: 15px;
     margin-bottom: 0px;
     transition:  all 0.5s;
+    color: var(--Background_Navbar_text_dark--)
 }
 
 .React_Router_Link{
@@ -55,7 +60,8 @@
     transition: all 0.5s;
 }
 .React_Router_Link.active *{
-    color: rgb(43, 43, 43);
+    color: var(--Background_Navbar_text--);
+    font-weight: 700;
 }
 .NavBar_Collapse{
     display: flex;
@@ -74,9 +80,6 @@
     }
     .navbar_icon{
         display: none;
-    }
-    .React_Router_Link.active *{
-        color: rgb(255, 255, 255);
     }
     #navbar_COC{
         color: rgb(255, 255, 255);
