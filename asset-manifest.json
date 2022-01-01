@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/Crack-Off-Campus/static/css/main.021d44f3.chunk.css",
+    "main.css": "/Crack-Off-Campus/static/css/main.68165f8f.chunk.css",
     "main.js": "/Crack-Off-Campus/static/js/main.c602cb46.chunk.js",
     "main.js.map": "/Crack-Off-Campus/static/js/main.c602cb46.chunk.js.map",
     "runtime-main.js": "/Crack-Off-Campus/static/js/runtime-main.2a4a0c00.js",
@@ -12,7 +12,7 @@
     "static/js/3.2ea9a723.chunk.js.map": "/Crack-Off-Campus/static/js/3.2ea9a723.chunk.js.map",
     "index.html": "/Crack-Off-Campus/index.html",
     "static/css/2.fb17aa6d.chunk.css.map": "/Crack-Off-Campus/static/css/2.fb17aa6d.chunk.css.map",
-    "static/css/main.021d44f3.chunk.css.map": "/Crack-Off-Campus/static/css/main.021d44f3.chunk.css.map",
+    "static/css/main.68165f8f.chunk.css.map": "/Crack-Off-Campus/static/css/main.68165f8f.chunk.css.map",
     "static/js/2.43fdde57.chunk.js.LICENSE.txt": "/Crack-Off-Campus/static/js/2.43fdde57.chunk.js.LICENSE.txt",
     "static/media/career_progress_ivdb.6a377e52.svg": "/Crack-Off-Campus/static/media/career_progress_ivdb.6a377e52.svg"
   },
@@ -20,7 +20,7 @@
     "static/js/runtime-main.2a4a0c00.js",
     "static/css/2.fb17aa6d.chunk.css",
     "static/js/2.43fdde57.chunk.js",
-    "static/css/main.021d44f3.chunk.css",
+    "static/css/main.68165f8f.chunk.css",
     "static/js/main.c602cb46.chunk.js"
   ]
 }
