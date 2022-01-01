@@ -3,14 +3,19 @@
     overflow-y: scroll;
     background-color: var(--BackgroundColor);
 }
-
+.Courses_Row{
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   flex-wrap: wrap;
+}
 .CourseCardComponent{
+    min-width: 30%;
     padding: 20px;
     height: auto;
 }
 
 .CourseCardComponent_inner{
-    margin: 10px;
     height: auto;
     transition: all 0.5s;
     backdrop-filter: blur(0px);
@@ -360,11 +365,17 @@ p{
   }
   @media (max-width:948px) {
     .CourseCardComponent{
-      padding: 25px;
+      width: 50%;
   }
   .CourseCardComponent_inner:hover{
     transform: scale(1.05);
    }
    .CourseCardComponent_inner{
    }
+  }
+  @media (max-width:600px) {
+    .CourseCardComponent{
+      width: 100%;
+  }
+  
   }
