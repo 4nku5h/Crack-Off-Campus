@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/Crack-Off-Campus/static/css/main.d7dcfa30.chunk.css",
-    "main.js": "/Crack-Off-Campus/static/js/main.c602cb46.chunk.js",
-    "main.js.map": "/Crack-Off-Campus/static/js/main.c602cb46.chunk.js.map",
-    "runtime-main.js": "/Crack-Off-Campus/static/js/runtime-main.2a4a0c00.js",
-    "runtime-main.js.map": "/Crack-Off-Campus/static/js/runtime-main.2a4a0c00.js.map",
+    "main.css": "/Crack-Off-Campus/static/css/main.5a096304.chunk.css",
+    "main.js": "/Crack-Off-Campus/static/js/main.4f22e21e.chunk.js",
+    "main.js.map": "/Crack-Off-Campus/static/js/main.4f22e21e.chunk.js.map",
+    "runtime-main.js": "/Crack-Off-Campus/static/js/runtime-main.03fae134.js",
+    "runtime-main.js.map": "/Crack-Off-Campus/static/js/runtime-main.03fae134.js.map",
     "static/css/2.fb17aa6d.chunk.css": "/Crack-Off-Campus/static/css/2.fb17aa6d.chunk.css",
-    "static/js/2.43fdde57.chunk.js": "/Crack-Off-Campus/static/js/2.43fdde57.chunk.js",
-    "static/js/2.43fdde57.chunk.js.map": "/Crack-Off-Campus/static/js/2.43fdde57.chunk.js.map",
-    "static/js/3.2ea9a723.chunk.js": "/Crack-Off-Campus/static/js/3.2ea9a723.chunk.js",
-    "static/js/3.2ea9a723.chunk.js.map": "/Crack-Off-Campus/static/js/3.2ea9a723.chunk.js.map",
+    "static/js/2.47c0e220.chunk.js": "/Crack-Off-Campus/static/js/2.47c0e220.chunk.js",
+    "static/js/2.47c0e220.chunk.js.map": "/Crack-Off-Campus/static/js/2.47c0e220.chunk.js.map",
+    "static/js/3.4440c90f.chunk.js": "/Crack-Off-Campus/static/js/3.4440c90f.chunk.js",
+    "static/js/3.4440c90f.chunk.js.map": "/Crack-Off-Campus/static/js/3.4440c90f.chunk.js.map",
     "index.html": "/Crack-Off-Campus/index.html",
     "static/css/2.fb17aa6d.chunk.css.map": "/Crack-Off-Campus/static/css/2.fb17aa6d.chunk.css.map",
-    "static/css/main.d7dcfa30.chunk.css.map": "/Crack-Off-Campus/static/css/main.d7dcfa30.chunk.css.map",
-    "static/js/2.43fdde57.chunk.js.LICENSE.txt": "/Crack-Off-Campus/static/js/2.43fdde57.chunk.js.LICENSE.txt",
+    "static/css/main.5a096304.chunk.css.map": "/Crack-Off-Campus/static/css/main.5a096304.chunk.css.map",
+    "static/js/2.47c0e220.chunk.js.LICENSE.txt": "/Crack-Off-Campus/static/js/2.47c0e220.chunk.js.LICENSE.txt",
     "static/media/career_progress_ivdb.6a377e52.svg": "/Crack-Off-Campus/static/media/career_progress_ivdb.6a377e52.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.2a4a0c00.js",
+    "static/js/runtime-main.03fae134.js",
     "static/css/2.fb17aa6d.chunk.css",
-    "static/js/2.43fdde57.chunk.js",
-    "static/css/main.d7dcfa30.chunk.css",
-    "static/js/main.c602cb46.chunk.js"
+    "static/js/2.47c0e220.chunk.js",
+    "static/css/main.5a096304.chunk.css",
+    "static/js/main.4f22e21e.chunk.js"
   ]
 }
