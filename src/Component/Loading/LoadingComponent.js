@@ -11,6 +11,8 @@ import LoginSignupComponent from "../LoginSignup/LoginSignupComponent";
 import AnimationComponent from "./AnimationComponent/AnimationComponent";
 
 
+import image_career from "./../../assets/undraw_our_solution_re_8yk6.svg";
+import image_career_Second from "./../../assets/undraw_graduation_re_gthn.svg";
 
 
 
@@ -24,17 +26,24 @@ function LoadingComponent() {
     }, 150)
   }
 
-  
+
   return (
-    <div className="Loading">
-      <div className="Loading_inner">
-        <AnimationComponent />
-        <h1 id="h1_appName">Crack off campus </h1>
-        <div className="BlurFilter"></div>
+    <div className="Loading_MAIN">
+      <div className="Loading">
+        <img src={image_career} className="Loading_first"alt="Loading"></img>
+
         <div className="btns_multiple">
+          <h2 id="h1_sideScreen">Login to your account </h2>
+          <img src={image_career_Second} className="loading_second_image" alt="Loading"></img>
           <button id="btn_Continue" onClick={loadMainComponent_WithoutLogin}>Continue Without Login</button>
           <button id="btn_Login" onClick={() => { dispatch(setLoginSignupComponentVisibility(true)) }} >Login</button>
         </div>
+
+      </div>
+      <div className="Loading_inner">
+        <h1 id="h1_appName">Crack off campus </h1>
+        <div className="BlurFilter"></div>
+
 
         {isLoginSignupComponentVisible == true ?
           (

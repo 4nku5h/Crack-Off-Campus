@@ -12,7 +12,6 @@
 .CourseCardComponent{
     min-width: 30%;
     padding: 20px;
-    height: auto;
 }
 
 .CourseCardComponent_inner{
@@ -372,6 +371,7 @@ p{
    }
    .CourseCardComponent_inner{
    }
+  
   }
   @media (max-width:600px) {
     .CourseCardComponent{

@@ -12,7 +12,7 @@ import { useDispatch, useSelector } from "react-redux";
 function App() {
     const isAccessWithoutLogin = useSelector(state => state.isAccessWithoutLogin);
     const isLoggedin = useSelector(state => state.isLoggedin)
-    const key_MainVisibility="MAIN_ACCESSIBLE";
+    const key_MainVisibility="MAIN_ACCESSIBLE_NOW";
     
     function saveToLocelStorage(key){
         localStorage.setItem(key,true);

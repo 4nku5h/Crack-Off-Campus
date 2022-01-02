@@ -1,7 +1,7 @@
 import React from "react";
 import './styles.css';
 import { useRef } from "react";
-import { XCircleFill} from 'react-bootstrap-icons';
+import { XLg} from 'react-bootstrap-icons';
 
 let ur = 'https://previews.123rf.com/images/dragonstock/dragonstock1907/dragonstock190700067/128815567-school-stationery-items-on-yellow-background-back-to-school-concept-.jpg'
 function LoginSignUp_UI(props) {
@@ -13,7 +13,7 @@ function LoginSignUp_UI(props) {
       <div className="LoginSignUp_divider_first">
         <div className="flex_row">
           <h3 id="LoginSignup_AppName">Crack off campus</h3>
-          <XCircleFill id="btn_close_LoginSignupComponent" ref={closeButtonRef}  onClick={() => props.handleCloseComponent()}/>
+          <XLg id="btn_close_LoginSignupComponent" ref={closeButtonRef}  onClick={() => props.handleCloseComponent()}/>
         </div>
 
         <form className="LoginSignUp_form">
