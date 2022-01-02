@@ -98,6 +98,12 @@ export const setJobsData = (data) => {
     payload: data
   };
 }
+export const setJobsFilter = (data) => {
+  return {
+    type: 'JOBS_DATA_FILTER',
+    payload: data
+  };
+}
 
 export const setCoursesData = (data) => {
   return {

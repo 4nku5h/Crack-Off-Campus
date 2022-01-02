@@ -144,7 +144,7 @@ function NavbarComponent(props) {
         <div className="Navbar">
             <div className="NavBar_Title">
                 <List className="NavBar_Menu" ref={ref_Menu} />
-                <h3 id="navbar_COC" href="#">Crack Off Campus</h3>
+                <h3 id="navbar_COC" href="#">Crack off campus</h3>
             </div>
             <div className='NavBar_Collapse_parent'>
                 <div className="NavBar_Collapse" ref={ref_Navbar_Collapse}>
