@@ -1,6 +1,14 @@
 :root {
   --BackgroundBorder:#b1b1b1;
 }
+@-webkit-keyframes fadeIn {
+  from { opacity: 0; }
+    to { opacity: 1; }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+    to { opacity: 1; }
+}
 .JobsComponent{
   display: flex;
   flex-direction: row;
@@ -174,7 +182,7 @@
   border-radius: 10px;
   border: 1px solid var(--BorderCard);
   height: 50%;
-  margin-right: 10px;
+  margin: 10px;
 }
 .JobDetailsFloat *{
   font-size: 15px;
@@ -196,7 +204,7 @@
   background-color: #ffffff;
   border-radius: 10px;
   border: 1px solid var(--BorderCard);
-  margin-left: 9px;
+  margin: 10px;
 
 }
 
@@ -211,6 +219,7 @@
   font-weight: bold;
   text-align: center;
   color: var(--FontColorDarkGray);
+  margin-bottom: 70px;
 }
 #JobFilter_items{
   color: var(--FontColorLightGray);
@@ -230,6 +239,7 @@
   margin-left: 5px;
   color: var(--FontColorDarkGray);
   font-weight: 600;
+  padding: 10px;
 }
 #input_filter_keyword{
   display: flex;
@@ -255,12 +265,17 @@
   border: 0.5px solid rgb(214, 214, 214);
   transition: all 0.7s;
   padding: 5px;
+  width: 40%;
 
 }
 #btn_filter_showResult:hover{
+  background-color:var(--Background_ThemeColor--);
+  color:rgb(245, 245, 245);
   transform: scale(1.05);
 }
 #btn_filter_clearResult:hover{
+  background-color:var(--Background_ThemeColor--);
+  color:rgb(245, 245, 245);
   transform: scale(1.05);
 
 }
@@ -289,6 +304,9 @@
     display: none;
   }
   .JobFilterFloat{
+    height: 90vh;
+    margin-top: 10px;
+    margin-right: 10px;
     flex: 0.9;
   }
   .jobsList{
@@ -316,14 +334,20 @@
     width: 100;
   }
   .jobsList{
-     
+   
+    height: 93vh;
   }
   .JobFilterFloat{
     display: none;
+    height: 90vh;
+    margin-right: 0px;
+  
   }
   .JobFilterFloat.active{
     display: flex;
     flex-basis: 100%;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
   }
   
   

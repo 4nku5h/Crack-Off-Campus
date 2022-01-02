@@ -8,7 +8,8 @@ import { List, Mailbox2, CreditCard2FrontFill, BookHalf, FolderSymlinkFill, Brie
 /// Router
 import { Link } from 'react-router-dom';
 import { useLocation } from 'react-router';
-import { is } from 'express/lib/request';
+
+import image_career_Second from "./../../assets/undraw_certificate_re_yadi.svg";
 
 function NavbarComponent(props) {
     const currentSelectdComponent = useSelector(state => state.currentSelectdComponent);
@@ -28,6 +29,7 @@ function NavbarComponent(props) {
     const ref_Menu = useRef(null);
 
     const ref_Navbar_Collapse = useRef(null);
+    const ref_navArt = useRef(null);
 
     function handleComponent(name) {
         toggleMenu(false)
@@ -121,9 +123,11 @@ function NavbarComponent(props) {
     function toggleMenu(val) {
         if (val == true) {
             ref_Navbar_Collapse.current.classList.add('active')
+            ref_navArt.current.classList.add('active')
         }
         else {
             ref_Navbar_Collapse.current.classList.remove('active')
+            ref_navArt.current.classList.remove('active')
         }
     }
 
@@ -142,60 +146,65 @@ function NavbarComponent(props) {
                 <List className="NavBar_Menu" ref={ref_Menu} />
                 <h3 id="navbar_COC" href="#">Crack Off Campus</h3>
             </div>
+            <div className='NavBar_Collapse_parent'>
+                <div className="NavBar_Collapse" ref={ref_Navbar_Collapse}>
 
-            <div className="NavBar_Collapse" ref={ref_Navbar_Collapse}>
-               
 
-                <Link to="/" className="React_Router_Link" ref={ref_JOBS}>
-                    <div className="Nav_ITEM_DIV" >
-                        <BriefcaseFill className="navbar_icon" />
-                        <h5 className="NAV_ITEM_TEXT">Jobs</h5>
-                    </div>
-                </Link>
+                    <Link to="/" className="React_Router_Link" ref={ref_JOBS}>
+                        <div className="Nav_ITEM_DIV" >
+                            <BriefcaseFill className="navbar_icon" />
+                            <h5 className="NAV_ITEM_TEXT">Jobs</h5>
+                        </div>
+                    </Link>
 
-                <Link to="/post" className="React_Router_Link" ref={ref_POST}>
-                    <div className="Nav_ITEM_DIV" >
-                        <Mailbox2 className="navbar_icon" />
-                        <h5 className="NAV_ITEM_TEXT">Posts</h5>
-                    </div>
+                    <Link to="/post" className="React_Router_Link" ref={ref_POST}>
+                        <div className="Nav_ITEM_DIV" >
+                            <Mailbox2 className="navbar_icon" />
+                            <h5 className="NAV_ITEM_TEXT">Posts</h5>
+                        </div>
 
-                </Link>
-                <Link to="/courses" className="React_Router_Link" ref={ref_COURSES} >
-                    <div className="Nav_ITEM_DIV">
-                        <BookHalf className="navbar_icon" />
-                        <h5 className="NAV_ITEM_TEXT">Courses</h5>
-                    </div>
-                </Link>
+                    </Link>
+                    <Link to="/courses" className="React_Router_Link" ref={ref_COURSES} >
+                        <div className="Nav_ITEM_DIV">
+                            <BookHalf className="navbar_icon" />
+                            <h5 className="NAV_ITEM_TEXT">Courses</h5>
+                        </div>
+                    </Link>
 
-                <Link to="/seewe" className="React_Router_Link" ref={ref_SEEWE} >
-                    <div className="Nav_ITEM_DIV">
-                        <CreditCard2FrontFill className="navbar_icon" />
-                        <h5 className="NAV_ITEM_TEXT">Seewe</h5>
-                    </div>
-                </Link>
+                    <Link to="/seewe" className="React_Router_Link" ref={ref_SEEWE} >
+                        <div className="Nav_ITEM_DIV">
+                            <CreditCard2FrontFill className="navbar_icon" />
+                            <h5 className="NAV_ITEM_TEXT">Seewe</h5>
+                        </div>
+                    </Link>
 
-                <Link to="/hire" className="React_Router_Link" ref={ref_HIRE}>
-                    <div className="Nav_ITEM_DIV">
-                        <FolderSymlinkFill className="navbar_icon" />
-                        <h5 className="NAV_ITEM_TEXT">Hire</h5>
-                    </div>
-                </Link>
+                    <Link to="/hire" className="React_Router_Link" ref={ref_HIRE}>
+                        <div className="Nav_ITEM_DIV">
+                            <FolderSymlinkFill className="navbar_icon" />
+                            <h5 className="NAV_ITEM_TEXT">Hire</h5>
+                        </div>
+                    </Link>
 
-                <Link to="/placement" className="React_Router_Link" ref={ref_PLACEMENT}>
-                    <div className="Nav_ITEM_DIV">
-                        <TvFill className="navbar_icon" />
-                        <h5 className="NAV_ITEM_TEXT">Placement</h5>
-                    </div>
-                </Link>
+                    <Link to="/placement" className="React_Router_Link" ref={ref_PLACEMENT}>
+                        <div className="Nav_ITEM_DIV">
+                            <TvFill className="navbar_icon" />
+                            <h5 className="NAV_ITEM_TEXT">Placement</h5>
+                        </div>
+                    </Link>
 
-                <Link to="/compiler" className="React_Router_Link" ref={ref_IDE} >
-                    <div className="Nav_ITEM_DIV">
-                        <TerminalFill className="navbar_icon" />
-                        <h5 className="NAV_ITEM_TEXT">IDE</h5>
-                    </div>
-                </Link>
+                    <Link to="/compiler" className="React_Router_Link" ref={ref_IDE} >
+                        <div className="Nav_ITEM_DIV">
+                            <TerminalFill className="navbar_icon" />
+                            <h5 className="NAV_ITEM_TEXT">IDE</h5>
+                        </div>
+                    </Link>
 
+                </div>
+                <img src={image_career_Second} ref={ref_navArt} className="Navbar_art" alt="Loading"></img>
             </div>
+
+
+            
         </div>
     )
 }

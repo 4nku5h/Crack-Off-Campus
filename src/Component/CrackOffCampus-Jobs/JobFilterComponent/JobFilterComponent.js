@@ -63,19 +63,10 @@ function JobFilterComponent() {
                     <br></br>
                     {/*//////////////////////// FILTER COMPANIES NAME ///////////////////////////////////*/}
                     {/* <p className="divider_line"></p> */}
-                    <p id="JobFilter_Type">Companies</p>
-                    {/* Companies name should be sorted 'map_Companies' : To be Added */}
-                    {Array.from(map_Companies).map((key, value) => {
-                        return (
-                            <div className="JobFilter_divider_column">
-                                <input id="filter_company_checkbox" type="checkbox" value="checkedA" />
-                                <h1 id="JobFilter_items">{key}</h1>
-                            </div>
-                        )
-                    })}
+                
                     <div className='filter_buttons'>
-                        <button id="btn_filter_showResult">Remove Filter</button>
-                        <button id="btn_filter_clearResult">Show Results</button>
+                        <button id="btn_filter_showResult">Cancel</button>
+                        <button id="btn_filter_clearResult">Filter</button>
                     </div>
                 </div>
 
