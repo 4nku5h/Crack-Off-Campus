@@ -6,7 +6,6 @@
   flex-direction: row;
   justify-content: space-between;
   background-color: lavender;
-  padding: 10px;
 }
 .JobsComponent_careerImage_div{
   display: flex;
@@ -67,9 +66,9 @@
 }
 .JobsCardComponent_divider {
   width: 100%;
-  padding: 10px;
   justify-content: start;
   display: flex;
+  padding: 10px;
 }
 .JobsCardComponent_divider_first{
   display: flex;
@@ -110,6 +109,7 @@
   overflow-y: scroll;
   height: 90vh;
   align-items: center;
+  padding: 10px;
 }
 .jobsList *{
   font-size: 15px;
@@ -280,8 +280,9 @@
 
 @media(max-width:948px) {
   .JobsCardComponent{
-    width: 95%;
+    width: 100%;
   }
+
   .JobDetailsFloat{
   }
   .JobsComponent_careerImage_div{
@@ -303,12 +304,16 @@
     font-size: 13px;
   }
   .list-group-flush{
+    font-size: 12px;
     margin-left: 1px;
+  }
+  .JobsCardComponent:hover {
+    transform: scale(1.05);
   }
 }
 @media(max-width:700px) {
   .JobsCardComponent{
-    width: 97%;
+    width: 100;
   }
   .jobsList{
      
