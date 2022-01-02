@@ -98,7 +98,7 @@ function JobFilterComponent() {
 
     useEffect(()=>{
         dispatch(setJobsFilter(data.jobs))
-    })
+    },[data])
 
 
 
