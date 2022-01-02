@@ -13,10 +13,12 @@ import { FilterCircleFill } from 'react-bootstrap-icons';
 import { setJobsFilter } from '../../redux/actions/actions';
 
 function JobsMainComponent() {
+  
   const dispatch = useDispatch();
-  //dispatch(setJobsFilter(data.jobs))
+  //
 
   dispatch(fetchJobsData())
+
   return (
     <div>
       <div className="JobsComponent">

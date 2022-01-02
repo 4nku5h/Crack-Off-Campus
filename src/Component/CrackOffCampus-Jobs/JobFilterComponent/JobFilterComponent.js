@@ -7,16 +7,10 @@ import { jobsData } from '../../../redux/reducers/jobsData_reducer';
 
 function JobFilterComponent() {
     let ref_filter = useRef(null)
-    let map_Companies = new Map();
     let map_Locations = new Map();
     let map_Experiance = new Map();
     const data = useSelector(state => state.jobsData);
 
-    const filter_data = useSelector(state => state.jobsFilterData);
-
-    //const [key_filter, setKey_filter] = useState("")
-    //const [location_filter, setLocation_filter] = useState("")
-    //const [exp_filter, setExp_filter] = useState("")
     let key_filter="";
     let location_filter=""
     let exp_filter=""
@@ -51,14 +45,12 @@ function JobFilterComponent() {
     }
     function handleLocationFilter(e) {
         let val=e.target.value.trim().toUpperCase().split(",")[0]
-        if(val=="NONE") location_filter=""
-        else location_filter=val
+         location_filter=val
         handleFilter()
     }
     function handleExperianceFilter(e) {
         let val=e.target.value.trim().toUpperCase().split(",")[0]
-        if(val=="NONE")  exp_filter=""
-        else exp_filter=val
+         exp_filter=val
         handleFilter()
         
     }
@@ -77,22 +69,36 @@ function JobFilterComponent() {
             if( title.includes(key_filter)) return true
             return false;
         })
-        res=res.filter((i)=>{
-            let location=i.jobLocation.toUpperCase()
-            if(location.includes(location_filter))
-               return true
-            return false
-        })
-        res=res.filter((i)=>{
-            let experiance=i.jobLevel.toUpperCase()
-            if(experiance.includes(exp_filter))  
-                return true
-            
-            return false
-        })
+
+        if(location_filter!="NONE"){
+            res=res.filter((i)=>{
+                let location=i.jobLocation.toUpperCase()
+                if(location.includes(location_filter))
+                   return true
+                return false
+            })
+        }
+        if(exp_filter!="NONE"){
+
+            res=res.filter((i)=>{
+                let experiance=i.jobLevel.toUpperCase()
+                if(experiance.includes(exp_filter))  
+                    return true
+                
+                return false
+            })
+        }
+        
 
         dispatch(setJobsFilter(res))
     }
+    function handleRemoveFilter(){
+
+    }
+
+    useEffect(()=>{
+        dispatch(setJobsFilter(data.jobs))
+    })
 
 
 
@@ -131,8 +137,8 @@ function JobFilterComponent() {
                     {/* <p className="divider_line"></p> */}
 
                     <div className='filter_buttons'>
-                        <button id="btn_filter_showResult">Cancel</button>
-                        <button id="btn_filter_clearResult">Filter</button>
+                        <button id="btn_filter_showResult" onClick={handleRemoveFilter}>Reset</button>
+                        <button id="btn_filter_clearResult" onClick={handleFilter}>Filter</button>
                     </div>
                 </div>
 
