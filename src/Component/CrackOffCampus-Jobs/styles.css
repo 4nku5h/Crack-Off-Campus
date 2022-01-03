@@ -23,6 +23,7 @@
 }
 
 .JobsComponent_careerImage_svg{
+  margin: 20px;
   width: 90%;
 }
 .JobsComponent_filter_div{
@@ -121,6 +122,16 @@
 }
 .jobsList *{
   font-size: 15px;
+}
+.jobsList_error{
+  margin: 40px;
+  width: 70%;
+}
+.jobsList_error_h1{
+  color: var(--Background_ThemeColor--);
+  margin: 10px;
+  font-weight: 700;
+  font-size: 20px;
 }
 ::-webkit-scrollbar { 
   display: none;

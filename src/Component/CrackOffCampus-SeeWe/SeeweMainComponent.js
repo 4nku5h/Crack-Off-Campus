@@ -1,6 +1,6 @@
 import './styles.css';
 import React from "react";
-import image_career from "./../../assets/software_engineer_re_fyew.svg";
+import image_career from "./../../assets/seewe.svg";
 function SeeweMainComponent() {
     return (
         

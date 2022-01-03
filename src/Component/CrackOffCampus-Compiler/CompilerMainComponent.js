@@ -1,5 +1,5 @@
 import { useRef, useState } from "react";
-import image_career from "./../../assets/proud_coder_7ain.svg";
+import image_career from "./../../assets/compiler.svg";
 import "./styles.css";
 
 function CompilerMainComponent() {

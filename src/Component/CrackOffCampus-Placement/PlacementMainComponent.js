@@ -1,6 +1,6 @@
 import './styles.css';
 import React from "react";
-import image_career from "./../../assets/scrum_board_re_wk7v.svg";
+import image_career from "./../../assets/placement.svg";
 
 function PlacementMainComponent() {
     return (

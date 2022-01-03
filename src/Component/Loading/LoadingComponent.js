@@ -11,8 +11,8 @@ import LoginSignupComponent from "../LoginSignup/LoginSignupComponent";
 import AnimationComponent from "./AnimationComponent/AnimationComponent";
 
 
-import image_career from "./../../assets/undraw_our_solution_re_8yk6.svg";
-import image_career_Second from "./../../assets/undraw_graduation_re_gthn.svg";
+import image_career from "./../../assets/loading_1.svg";
+import image_career_Second from "./../../assets/loading_2.svg";
 
 
 

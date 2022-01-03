@@ -1,6 +1,8 @@
 import React from 'react';
 import JobCardComponent from '../JobCardComponent/JobCardComponent';
 
+import image_career from "./../../../assets/error.svg";
+
 import { useSelector } from "react-redux";
 
 function JobsList() {
@@ -14,7 +16,10 @@ function JobsList() {
                     return <JobCardComponent {...curr} />
                 })
             ) : (
-               <h1>No result Found</h1>
+                <div className='jobsList_error'>
+                    <img src={image_career} className="JobsComponent_careerImage_svg" alt="Loading"></img>
+                    <h1 className='jobsList_error_h1'>No Results found</h1>
+                </div>
             )}
         </div>
 

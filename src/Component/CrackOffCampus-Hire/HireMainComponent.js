@@ -1,7 +1,7 @@
 import './styles.css';
 import React from "react";
 
-import image_career from "./../../assets/social_dashboard_re_ocbd.svg";
+import image_career from "./../../assets/hire.svg";
 function HireMainComponent() {
     return (
         <div className="HireMainComponent">

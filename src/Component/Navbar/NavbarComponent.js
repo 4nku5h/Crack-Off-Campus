@@ -9,7 +9,7 @@ import { List, Mailbox2, CreditCard2FrontFill, BookHalf, FolderSymlinkFill, Brie
 import { Link } from 'react-router-dom';
 import { useLocation } from 'react-router';
 
-import image_career_Second from "./../../assets/undraw_certificate_re_yadi.svg";
+import image_career_Second from "./../../assets/navbar.svg";
 
 function NavbarComponent(props) {
     const currentSelectdComponent = useSelector(state => state.currentSelectdComponent);
