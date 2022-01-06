@@ -12,7 +12,6 @@ import CompilerMainComponent from "./CrackOffCampus-Compiler/CompilerMainCompone
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 function MainComponent() {
-
     return (
         <Router basename="/Crack-Off-Campus">
             <NavbarComponent />
