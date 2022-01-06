@@ -1,7 +1,7 @@
 import React from 'react'
 function JobDetailsFloatComponent() {
     return (
-        <div class="JobDetailsFloat">
+        <div className="JobDetailsFloat">
             <p id="JobFloat_Title">Total Jobs</p>
             <p className="divider_line"></p>
             <p id="JobFloat_items">Applied : 100</p>

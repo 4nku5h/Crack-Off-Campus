@@ -14,7 +14,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 function MainComponent() {
 
     return (
-        <Router>
+        <Router basename="/Crack-Off-Campus">
             <NavbarComponent />
             <Switch>
                 <Route path="/post" exact component={HomeMainComponent} />

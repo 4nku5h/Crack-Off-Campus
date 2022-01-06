@@ -104,7 +104,7 @@ function JobFilterComponent() {
 
     return (
         <>
-            <div class='JobFilterFloat' ref={ref_filter}>
+            <div className='JobFilterFloat' ref={ref_filter}>
                 <div className="JobFilterFloat_Main">
                     <p id="JobFilter_Title">Filter</p>
                     <p id="JobFilter_Type">Enter Keyword</p>

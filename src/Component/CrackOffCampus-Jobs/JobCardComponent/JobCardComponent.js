@@ -7,7 +7,7 @@ function handleCardClick(data){
 function JobCardComponent(data) {
     return (
         <div className="JobsCardComponent" onClick={()=>handleCardClick(data)}>
-            <div class="Card">
+            <div className="Card">
                 <div className="JobsCardComponent_divider">
                     <div className="JobsCardComponent_divider_first">
                         <img className="JobsCardComponent_company_image" variant="top" src={data.jobImageUrl} />
